@@ -1,0 +1,104 @@
+﻿@model DAPMDuLich.Models.MucGia
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/layoutadmin.cshtml";
+}
+
+<style>
+    /* Apply Roboto font to all text */
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Center the delete container */
+    .delete-container {
+        max-width: 450px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+        .delete-container h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            /* Add icon for visual appeal */
+            .delete-container h2:before {
+                content: "🗑️";
+                font-size: 28px;
+                margin-right: 10px;
+            }
+
+    h3 {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        font-size: 20px;
+        color: #444;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+
+    .btn-danger {
+        background-color: #e74c3c;
+        color: #fff;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 25px;
+        margin-right: 10px;
+        font-weight: bold;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        box-shadow: 0px 4px 10px rgba(231, 76, 60, 0.4);
+    }
+
+        .btn-danger:hover {
+            background-color: #c0392b;
+            box-shadow: 0px 4px 12px rgba(192, 57, 43, 0.5);
+        }
+
+    .btn-default {
+        background-color: #7f8c8d;
+        color: #fff;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        box-shadow: 0px 4px 10px rgba(127, 140, 141, 0.4);
+    }
+
+        .btn-default:hover {
+            background-color: #5d6d7e;
+            box-shadow: 0px 4px 12px rgba(93, 109, 126, 0.5);
+        }
+</style>
+
+<div class="delete-container">
+    <h2>Xóa Mức Giá</h2>
+    <h3>Bạn có chắc chắn muốn xóa mức giá này không?</h3>
+    <h4>@Model.Gia</h4>
+
+    @using (Html.BeginForm("DeleteConfirmed", "Price", new { area = "Admin" }, FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.ID)
+
+        <button type="submit" class="btn btn-danger">Xóa</button>
+        <a href="@Url.Action("List")" class="btn btn-default">Hủy</a>
+    }
+</div>
+

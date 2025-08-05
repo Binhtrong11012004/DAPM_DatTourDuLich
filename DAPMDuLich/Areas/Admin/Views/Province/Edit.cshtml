@@ -1,0 +1,76 @@
+﻿@model DAPMDuLich.Models.TinhThanh
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/layoutadmin.cshtml";
+}
+
+<!-- Import Roboto font -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<div class="page-header">
+    <h2>Chỉnh sửa loại tour</h2>
+</div>
+
+@using (Html.BeginForm("Edit", "Province", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.ID_Tinh)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Ten, "Tên Tỉnh Thành")
+        @Html.TextBoxFor(model => model.Ten, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Lưu Thay Đổi" class="btn btn-primary" />
+        <a href="@Url.Action("List")" class="btn btn-default">Hủy</a>
+    </div>
+}
+
+<style>
+    /* Apply Roboto font to all text */
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .page-header {
+        text-align: center;
+        color: #2c3e50;
+        font-weight: 700;
+        font-size: 26px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding-top: 20px;
+    }
+        /* Specifically apply Roboto font to h2 inside .page-header */
+        .page-header h2 {
+            font-family: 'Roboto', sans-serif !important;
+        }
+
+    .form-group label {
+        font-weight: 500;
+    }
+
+    .btn-primary {
+        background-color: #3498db;
+        border-color: #3498db;
+        color: #fff;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+    .btn-default {
+        background-color: #ccc;
+        color: #333;
+    }
+
+        .btn-default:hover {
+            background-color: #b3b3b3;
+        }
+</style>
+

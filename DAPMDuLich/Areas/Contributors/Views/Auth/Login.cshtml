@@ -1,0 +1,210 @@
+﻿@model DAPMDuLich.Models.Contributor
+
+@{
+    ViewBag.Title = "Đăng Nhập";
+    Layout = "~/Areas/Contributors/Views/Shared/LayoutDN.cshtml";
+}
+
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+
+<script>
+    var canvas, ctx, snowflakes = [];
+
+    function setupCanvas() {
+        canvas = document.getElementById("projector");
+        ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Create snowflakes
+        for (var i = 0; i < 200; i++) {
+            snowflakes.push(createSnowflake());
+        }
+
+        animateSnowflakes();
+    }
+
+    function createSnowflake() {
+        return {
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 5 + 2,
+            alpha: Math.random() * 0.5 + 0.3,
+            speedY: Math.random() * 1 + 0.5,
+            speedX: Math.random() * 0.5 - 0.25
+        };
+    }
+
+    function updateSnowflakes() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        snowflakes.forEach(function (snowflake) {
+            snowflake.y += snowflake.speedY;
+
+            if (snowflake.y > canvas.height) {
+                snowflake.y = -snowflake.size;
+                snowflake.x = Math.random() * canvas.width;
+            }
+
+            snowflake.x += snowflake.speedX;
+
+            if (snowflake.x > canvas.width) snowflake.x = 0;
+            if (snowflake.x < 0) snowflake.x = canvas.width;
+
+            ctx.fillStyle = "#FFFFFF";
+            ctx.globalAlpha = snowflake.alpha;
+            ctx.beginPath();
+            ctx.arc(snowflake.x, snowflake.y, snowflake.size, 0, Math.PI * 2);
+            ctx.fill();
+        });
+    }
+
+    function animateSnowflakes() {
+        updateSnowflakes();
+        requestAnimationFrame(animateSnowflakes);
+    }
+
+    window.onload = setupCanvas;
+</script>
+
+<style>
+    body {
+        background-image: url('/Areas/Contributors/assets/img/dangnhap.jpg');
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #333;
+    }
+
+    canvas#projector {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .login-container {
+        background-color: rgba(0, 31, 63, 0.85); /* Đổi nền đen thành xanh đậm */
+        width: 420px;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        color: #fff;
+    }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 32px; /* Tăng kích cỡ chữ tiêu đề */
+            color: #ffffff;
+            font-weight: bold;
+            letter-spacing: 1px; /* Tạo khoảng cách giữa các chữ cái */
+        }
+
+        .login-container label {
+            font-size: 15px;
+            color: #cccccc; /* Đổi màu chữ nhãn thành xám nhẹ */
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0 20px;
+            border: 1px solid #444;
+            border-radius: 6px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            transition: border-color 0.3s;
+            opacity: 0.85; /* Giảm độ sáng cho input */
+        }
+
+            .login-container input::placeholder {
+                color: #aaaaaa; /* Màu placeholder nhạt hơn */
+            }
+
+            .login-container input:focus {
+                border-color: #007BFF;
+                outline: none;
+                background-color: rgba(255, 255, 255, 0.15);
+            }
+
+        .login-container button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #007BFF, #0056b3); /* Đổi nền thành gradient */
+            border: none;
+            color: white;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+            .login-container button:hover {
+                box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+            }
+
+        .login-container a {
+            color: #8bc6ff; /* Đổi màu liên kết thành xanh nhạt */
+            text-decoration: none;
+        }
+
+    .login-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        font-size: 15px;
+    }
+
+        .login-links a:hover {
+            color: #4aa3f0; /* Đổi màu khi hover */
+            text-decoration: underline;
+        }
+
+    .text-danger {
+        color: #ff4d4d;
+        font-size: 14px;
+        margin-top: -10px;
+    }
+</style>
+
+<!-- Canvas Element for Snowflakes -->
+<canvas id="projector"></canvas>
+
+<div class="login-container">
+    <h2>Đăng Nhập</h2>
+    @using (Html.BeginForm("Login", "Auth", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <label for="username">Tên Đăng nhập Công Ty</label>
+            @Html.TextBoxFor(model => model.ContributorName, new { @class = "form-control", @id = "username", @required = "required" })
+            @Html.ValidationMessageFor(model => model.ContributorName, "", new { @class = "text-danger" })
+
+            <label for="password">Mật khẩu</label>
+            @Html.PasswordFor(model => model.ContributorPassword, new { @class = "form-control", @id = "password", @required = "required" })
+            @Html.ValidationMessageFor(model => model.ContributorPassword, "", new { @class = "text-danger" })
+
+            <button type="submit">Đăng nhập</button>
+
+            <div class="login-links">
+                <a href="@Url.Action("Register", "Auth", new { area = "Contributors" })">Đăng ký tài khoản công ty</a>
+                <a href="#">Quên mật khẩu?</a>
+            </div>
+        </div>
+    }
+</div>

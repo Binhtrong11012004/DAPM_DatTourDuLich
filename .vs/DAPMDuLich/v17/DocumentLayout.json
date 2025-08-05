@@ -1,0 +1,312 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\areas\\user\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\areas\\user\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\areas\\contributors\\controllers\\tourcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\areas\\contributors\\controllers\\tourcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\areas\\contributors\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\areas\\contributors\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\areas\\contributors\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\areas\\contributors\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\areas\\user\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\areas\\user\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\areas\\contributors\\assets\\notification.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\areas\\contributors\\assets\\notification.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\areas\\contributors\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\areas\\contributors\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\areas\\contributors\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\areas\\contributors\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\areas\\contributors\\views\\tour\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\areas\\contributors\\views\\tour\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\areas\\contributors\\views\\shared\\menulayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\areas\\contributors\\views\\shared\\menulayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\areas\\admin\\controllers\\tourstatisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\areas\\admin\\controllers\\tourstatisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\areas\\contributors\\views\\booking\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\areas\\contributors\\views\\booking\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\areas\\contributors\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\areas\\contributors\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\dapmdulich\\areas\\admin\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\areas\\admin\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|c:\\users\\admin\\source\\repos\\dapmdulich\\dapmdulich\\areas\\admin\\views\\booking\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C1EC438-AF53-4E61-A569-3881757A331C}|DAPMDuLich\\DAPMDuLich.csproj|solutionrelative:dapmdulich\\areas\\admin\\views\\booking\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\User\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Areas\\User\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\User\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "DAPMDuLich\\Areas\\User\\Views\\Auth\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T14:24:35.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\User\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Areas\\User\\Controllers\\BookingController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\User\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "DAPMDuLich\\Areas\\User\\Controllers\\BookingController.cs",
+              "ViewState": "AQIAANsAAAAAAAAAAAAmwOsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T12:23:58.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Areas\\Contributors\\Controllers\\BookingController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "DAPMDuLich\\Areas\\Contributors\\Controllers\\BookingController.cs",
+              "ViewState": "AQIAAA8BAAAAAAAAAAAiwBYBAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T03:21:36.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Areas\\Contributors\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "DAPMDuLich\\Areas\\Contributors\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACgAAAAAAAAAAAAAAFcAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T02:56:28.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Views\\Tour\\List.cshtml",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Areas\\Contributors\\Views\\Tour\\List.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Views\\Tour\\List.cshtml",
+              "RelativeToolTip": "DAPMDuLich\\Areas\\Contributors\\Views\\Tour\\List.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T02:42:22.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TourController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Controllers\\TourController.cs",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Areas\\Contributors\\Controllers\\TourController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Controllers\\TourController.cs",
+              "RelativeToolTip": "DAPMDuLich\\Areas\\Contributors\\Controllers\\TourController.cs",
+              "ViewState": "AQIAANMAAAAAAAAAAAAAAOYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T02:09:04.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "notification.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\assets\\notification.css",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Areas\\Contributors\\assets\\notification.css",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\assets\\notification.css",
+              "RelativeToolTip": "DAPMDuLich\\Areas\\Contributors\\assets\\notification.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-07T13:16:52.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Areas\\Contributors\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "DAPMDuLich\\Areas\\Contributors\\Views\\Auth\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T02:09:32.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Areas\\Contributors\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "DAPMDuLich\\Areas\\Contributors\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAkwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T03:22:02.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Models\\Model1.edmx",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Models\\Model1.edmx",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Models\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "DAPMDuLich\\Models\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-10-07T13:23:57.477Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Web.config",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Web.config",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Web.config",
+              "RelativeToolTip": "DAPMDuLich\\Web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-07T12:40:30.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TourStatisticsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Admin\\Controllers\\TourStatisticsController.cs",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Areas\\Admin\\Controllers\\TourStatisticsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Admin\\Controllers\\TourStatisticsController.cs",
+              "RelativeToolTip": "DAPMDuLich\\Areas\\Admin\\Controllers\\TourStatisticsController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCEAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T03:43:47.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Views\\Booking\\List.cshtml",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Areas\\Contributors\\Views\\Booking\\List.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Views\\Booking\\List.cshtml",
+              "RelativeToolTip": "DAPMDuLich\\Areas\\Contributors\\Views\\Booking\\List.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACMAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T03:22:58.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MenuLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Views\\Shared\\MenuLayout.cshtml",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Areas\\Contributors\\Views\\Shared\\MenuLayout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Views\\Shared\\MenuLayout.cshtml",
+              "RelativeToolTip": "DAPMDuLich\\Areas\\Contributors\\Views\\Shared\\MenuLayout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T02:09:21.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Areas\\Contributors\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Contributors\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "DAPMDuLich\\Areas\\Contributors\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T03:22:01.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Admin\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Areas\\Admin\\Controllers\\BookingController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Admin\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "DAPMDuLich\\Areas\\Admin\\Controllers\\BookingController.cs",
+              "ViewState": "AQIAALsAAAAAAAAAAADwv88AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T14:46:21.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Admin\\Views\\Booking\\List.cshtml",
+              "RelativeDocumentMoniker": "DAPMDuLich\\Areas\\Admin\\Views\\Booking\\List.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\DAPMDuLich\\DAPMDuLich\\Areas\\Admin\\Views\\Booking\\List.cshtml",
+              "RelativeToolTip": "DAPMDuLich\\Areas\\Admin\\Views\\Booking\\List.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAD4AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-06T14:46:18.908Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

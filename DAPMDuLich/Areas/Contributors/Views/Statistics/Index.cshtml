@@ -1,0 +1,183 @@
+﻿@model DAPMDuLich.Areas.Contributors.Data.ViewModel.ContributorStatisticsViewModel
+@{
+    ViewBag.Title = "Thống kê";
+    Layout = "~/Areas/Contributors/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thống kê</h2>
+
+<div class="statistics-info">
+    <div class="statistic-item">
+        <div class="stat-title">
+            📄 Bài viết đã được duyệt
+            <span class="stat-value">@Model.TotalApprovedPosts</span>
+        </div>
+        <div class="stat-line" style="width: @Model.TotalApprovedPosts * 10%"></div>
+    </div>
+
+    <div class="statistic-item">
+        <div class="stat-title">
+            📅 Số lượt đặt tour
+            <span class="stat-value">@Model.TotalBookings</span>
+        </div>
+        <div class="stat-line" style="width: @Model.TotalBookings * 10%"></div>
+    </div>
+
+    <div class="statistic-item">
+        <div class="stat-title">
+            💵 Đặt tour đã thanh toán 100%
+            <span class="stat-value">@Model.TotalPaidBookings</span>
+        </div>
+        <div class="stat-line" style="width: @Model.TotalPaidBookings * 10%"></div>
+    </div>
+
+    <div class="statistic-item">
+        <div class="stat-title">
+            💳 Đặt tour đã thanh toán 50%
+            <span class="stat-value">@Model.TotalUnpaidBookings</span>
+        </div>
+        <div class="stat-line" style="width: @Model.TotalUnpaidBookings * 10%"></div>
+    </div>
+
+    <div class="statistic-item">
+        <div class="stat-title">
+            💰 Tổng số tiền thanh toán
+            <span class="stat-value">@Model.TotalPaidAmount.ToString("0") $</span>
+        </div>
+        <div class="stat-line" style="width: calc(@Model.TotalPaidAmount / 1000 * 100%)"></div>
+    </div>
+</div>
+
+<!-- CSS for the enhanced design -->
+<style>
+    /* General settings for the snow effect */
+    #projector {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -2; /* Make sure snowflakes are in the background, under all UI elements */
+        pointer-events: none; /* So the snowflakes don't interfere with other UI elements */
+        overflow: hidden;
+    }
+
+    /* Title styling */
+    h2 {
+        text-align: center;
+        font-size: 2em;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    /* Statistics container */
+    .statistics-info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 700px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fdfdfd;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        position: relative; /* Ensure it's on top of the snowflakes */
+        z-index: 1; /* Ensure statistics are above the snowflakes */
+    }
+
+    /* Each statistic item */
+    .statistic-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Title of each stat with natural colors */
+    .stat-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #2f4f4f;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* Value styling with a soft green */
+    .stat-value {
+        font-weight: bold;
+        font-size: 1.5em;
+        color: #228B22;
+    }
+
+    /* Progress bar with a gradient */
+    .stat-line {
+        height: 10px;
+        background: linear-gradient(135deg, #b3d9a3, #709775);
+        border-radius: 5px;
+        transition: width 1s ease;
+    }
+</style>
+
+<!-- JavaScript for the snowflake effect -->
+<script>
+    var canvas, ctx, snowflakes = [];
+
+    function setupCanvas() {
+        canvas = document.getElementById("projector");
+        ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth; // Full width of the screen
+        canvas.height = window.innerHeight; // Full height of the screen
+
+        // Ensure that the canvas does not cover the sidebar or other critical UI parts
+        // If your admin layout has a fixed sidebar, adjust the canvas width accordingly
+        var sidebarWidth = 250;  // Assuming sidebar width is 250px, you can adjust based on your layout
+        canvas.width = window.innerWidth - sidebarWidth; // Leave space for sidebar
+
+        for (var i = 0; i < 30; i++) {
+            snowflakes.push(createSnowflake());
+        }
+
+        animateSnowflakes();
+    }
+
+    function createSnowflake() {
+        return {
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 15 + 10,
+            alpha: Math.random() * 0.5 + 0.3,
+            speedY: Math.random() * 1 + 0.5,
+            speedX: Math.random() * 0.5 - 0.25,
+            icon: "❄️"
+        };
+    }
+
+    function updateSnowflakes() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        snowflakes.forEach(function (snowflake) {
+            snowflake.y += snowflake.speedY;
+            if (snowflake.y > canvas.height) {
+                snowflake.y = -snowflake.size;
+                snowflake.x = Math.random() * canvas.width;
+            }
+
+            snowflake.x += snowflake.speedX;
+            if (snowflake.x > canvas.width) snowflake.x = 0;
+            if (snowflake.x < 0) snowflake.x = canvas.width;
+
+            ctx.fillStyle = "#FFFFFF";
+            ctx.font = snowflake.size + "px Arial";
+            ctx.globalAlpha = snowflake.alpha;
+            ctx.fillText(snowflake.icon, snowflake.x, snowflake.y);
+        });
+    }
+
+    function animateSnowflakes() {
+        updateSnowflakes();
+        requestAnimationFrame(animateSnowflakes);
+    }
+
+    window.onload = setupCanvas;
+</script>

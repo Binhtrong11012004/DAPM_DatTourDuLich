@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lỏ tourist</title>
+    <link rel="stylesheet" href="~/CSS/ThanhNavigation.css" />
+    @*<link rel="stylesheet" href="~/CSS/Slideshow.css" />*@
+    <link rel="stylesheet" href="~/CSS/NoidungvaFooter.css" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- FlexSlider CSS -->
+    @*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css">*@
+</head>
+<body>
+    <!-- Thanh navigation -->
+    <header>
+        <div class="top-bar">
+            <div class="contact-info">
+                <p>info@tourist.net</p>
+                <p>Hotline: 0903740866</p>
+            </div>
+            <div class="login-register">
+                <div class="user-icon" id="userIcon">
+                    <i class="fas fa-user"></i>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <a href="#" id="personal-info-btn">Thông tin cá nhân</a>
+                        <a href="#" id="personal-history-btn">Lịch sử thanh toán</a>
+                        <a href="#" id="logout-btn">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        var userIcon = document.getElementById('userIcon');
+        var dropdownContent = document.getElementById('dropdownContent');
+
+        userIcon.addEventListener('click', function (event) {
+            event.preventDefault();
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        window.addEventListener('click', function (event) {
+            if (!userIcon.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+
+        // Khi click vào "Thông tin cá nhân"
+        document.getElementById('personal-info-btn').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = '@Url.Action("Details", "InfomationCus")';
+        });
+
+        // Khi click vào "Lịch sử thanh toán"
+        document.getElementById('personal-history-btn').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = '@Url.Action("History", "Booking")';
+        });
+
+           // Sửa phần đăng xuất
+    document.getElementById('logout-btn').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        fetch('@Url.Action("DangXuat", "Auth", new { area = "User" })', {
+            method: 'POST',
+            credentials: 'same-origin'
+        }).then(response => {
+            if (response.ok) {
+                // Chuyển hướng về trang login sau khi đăng xuất thành công
+                window.location.href = '@Url.Action("Login", "Auth", new {area = "User"})';
+            } else {
+                console.error('Đăng xuất không thành công!');
+            }
+        }).catch(error => {
+            console.error('Có lỗi xảy ra:', error);
+        });
+    });
+});
+    </script>
+
+    @helper ShowMenu(List<DAPMDuLich.Models.LoaiTour> DanhSachTour)
+    {
+        foreach (var item in DanhSachTour)
+        {
+            var listDuoi = new DAPMDuLich.Models.mapLoaiTour().DanhSachCapDuoi(item.ID);
+            <li>
+                <a href="~/TourDuLich/DanhSach?idloaitour=@item.ID">@item.Ten</a>
+                @if (listDuoi.Count > 0)
+                {
+                    <ul>
+                        @ShowMenu(listDuoi)
+                    </ul>
+                }
+            </li>
+        }
+    }
+    Menu
+    <div class="col-12 menu">
+        <ul>
+            <li><a href="@Url.Action("Home", "Home", new { area = "User" })" style="color:white">TRANG CHỦ</a></li>
+            <li><a href="#" style="color:white">TOUR TRONG NƯỚC</a></li>
+            <li><a href="#" style="color:white">TOUR NGOÀI NƯỚC</a></li>
+            <li><a href="#" style="color:white">KIỂU TOUR DU LỊCH</a></li>
+            <li><a href="#" style="color:white">DỊCH VỤ</a></li>
+            <li><a href="#" style="color:white">GIỚI THIỆU</a></li>
+        </ul>
+    </div>
+
+    <!-- Slideshow -->
+    <!--<div class="flexslider">
+        <ul class="slides">
+            <li>
+                <img src="~/HinhAnh/bacau.jpg" />
+            </li>
+            <li>
+                <img src="~/HinhAnh/daklak.jpg" />
+            </li>
+            <li>
+                <img src="~/HinhAnh/trungquoc.jpg" />
+            </li>
+            <li>
+                <img src="~/HinhAnh/dubai.jpg" />
+            </li>
+        </ul>
+    </div>-->
+    <!-- Nội dung -->
+    <main>
+        @RenderBody()
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Tourist Website. All rights reserved.</p>
+    </footer>
+
+    <!-- jQuery -->
+    <!--<script src="~/CSS/jquery.min.js"></script>-->
+    <!-- FlexSlider JS -->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+    <script>
+        $(window).on('load', function () {
+            $('.flexslider').flexslider({
+                animation: "slide"
+            });
+        });
+    </script>-->
+</body>
+</html>

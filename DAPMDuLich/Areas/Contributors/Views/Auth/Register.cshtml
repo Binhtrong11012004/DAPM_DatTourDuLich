@@ -1,0 +1,247 @@
+﻿@model DAPMDuLich.Models.Contributor
+
+@{
+    ViewBag.Title = "Đăng Ký";
+}
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+
+<script>
+    var canvas, ctx, snowflakes = [];
+
+    function setupCanvas() {
+        canvas = document.getElementById("projector");
+        ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        for (var i = 0; i < 200; i++) {
+            snowflakes.push(createSnowflake());
+        }
+
+        animateSnowflakes();
+    }
+
+    function createSnowflake() {
+        return {
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 5 + 2,
+            alpha: Math.random() * 0.5 + 0.3,
+            speedY: Math.random() * 1 + 0.5,
+            speedX: Math.random() * 0.5 - 0.25
+        };
+    }
+
+    function updateSnowflakes() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        snowflakes.forEach(function (snowflake) {
+            snowflake.y += snowflake.speedY;
+
+            if (snowflake.y > canvas.height) {
+                snowflake.y = -snowflake.size;
+                snowflake.x = Math.random() * canvas.width;
+            }
+
+            snowflake.x += snowflake.speedX;
+
+            if (snowflake.x > canvas.width) snowflake.x = 0;
+            if (snowflake.x < 0) snowflake.x = canvas.width;
+
+            ctx.fillStyle = "#FFFFFF";
+            ctx.globalAlpha = snowflake.alpha;
+            ctx.beginPath();
+            ctx.arc(snowflake.x, snowflake.y, snowflake.size, 0, Math.PI * 2);
+            ctx.fill();
+        });
+    }
+
+    function animateSnowflakes() {
+        updateSnowflakes();
+        requestAnimationFrame(animateSnowflakes);
+    }
+
+    window.onload = setupCanvas;
+</script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="register-container">
+        <h2>Đăng ký tài khoản công ty</h2>
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                <label for="fullname">Tên Công Ty(*)</label>
+                @Html.EditorFor(model => model.ContributorNickName, new { htmlAttributes = new { @class = "form-control", @id = "fullname" } })
+                @Html.ValidationMessageFor(model => model.ContributorNickName, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="Username">Tên đăng nhập công ty:(*)</label>
+                @Html.EditorFor(model => model.ContributorName, new { htmlAttributes = new { @class = "form-control", @id = "Username" } })
+                @Html.ValidationMessageFor(model => model.ContributorName, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email công ty:(*)</label>
+                @Html.EditorFor(model => model.ContributorEmail, new { htmlAttributes = new { @class = "form-control", @id = "email" } })
+                @Html.ValidationMessageFor(model => model.ContributorEmail, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Số điện thoại của công ty(*)</label>
+                @Html.EditorFor(model => model.ContributorPhone, new { htmlAttributes = new { @class = "form-control", @id = "phone" } })
+                @Html.ValidationMessageFor(model => model.ContributorPhone, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="address">Địa chỉ công ty:(*)</label>
+                @Html.EditorFor(model => model.ContributorAddress, new { htmlAttributes = new { @class = "form-control", @id = "address" } })
+                @Html.ValidationMessageFor(model => model.ContributorAddress, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu(*)</label>
+                @Html.EditorFor(model => model.ContributorPassword, new { htmlAttributes = new { @class = "form-control", @type = "password", @id = "password" } })
+                @Html.ValidationMessageFor(model => model.ContributorPassword, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Xác nhận mật khẩu(*)</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">Đăng Ký</button>
+                <button type="reset" class="btn btn-secondary">Hủy</button>
+            </div>
+
+            <div class="login-link">
+                Đã có tài khoản? <a href="@Url.Action("Login", "Auth", new { area = "Contributors" })">Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+    <canvas id="projector"></canvas>
+}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        background-image: url('https://png.pngtree.com/background/20230519/original/pngtree-beautiful-christmas-eiffel-tower-on-a-winter-day-picture-image_2663250.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .register-container {
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 350px;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+        margin-top: 50px;
+        text-align: left; /* Căn trái thay vì căn giữa */
+        position: relative;
+        z-index: 10;
+    }
+
+        .register-container h2 {
+            color: #FFFFFF;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            text-align: center; /* Tiêu đề vẫn căn giữa */
+        }
+
+    label {
+        color: #e6e6e6;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 8px;
+        font-size: 14px;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+        text-align: left; /* Căn trái */
+    }
+
+    .button-group {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .btn {
+        padding: 10px;
+        width: 100px;
+        font-size: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #1db954;
+        color: white;
+        border: none;
+    }
+
+        .btn-primary:hover {
+            background-color: #17a34a;
+        }
+
+    .btn-secondary {
+        background-color: #e84118;
+        color: white;
+        border: none;
+    }
+
+        .btn-secondary:hover {
+            background-color: #c23616;
+        }
+
+    .login-link {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #ffffff;
+        text-align: center;
+    }
+
+        .login-link a {
+            color: #1db954;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    #projector {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+    }
+</style>

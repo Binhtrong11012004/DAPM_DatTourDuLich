@@ -1,0 +1,20 @@
+﻿.large-icon {
+    font-size: 1.5rem; /* Tăng kích thước biểu tượng */
+    color: #ff5722; /* Màu sắc nổi bật hơn */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+}
+    .large-icon:hover {
+        color: #f44336; /* Màu sắc khi hover */
+    }
+
+
+.notification-read {
+    background-color: #f8f9fa; /* Màu nền cho thông báo đã đọc */
+    color: #6c757d; /* Màu chữ cho thông báo đã đọc */
+}
+
+.notification-unread {
+    background-color: #d1ecf1; /* Màu nền cho thông báo chưa đọc */
+    color: #0c5460; /* Màu chữ cho thông báo chưa đọc */
+    font-weight: bold; /* Chữ đậm cho thông báo chưa đọc */
+}

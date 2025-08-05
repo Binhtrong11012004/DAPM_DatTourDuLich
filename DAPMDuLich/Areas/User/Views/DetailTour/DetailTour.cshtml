@@ -1,0 +1,283 @@
+﻿@model DAPMDuLich.Models.TourDuLich
+
+@{
+    ViewBag.Title = "ChiTiet";
+    Layout = "~/Areas/User/Views/Shared/LayoutCus.cshtml";
+}
+
+<link rel="stylesheet" href="~/CSS/animate.css" />
+<link rel="stylesheet" href="~/CSS/bootstrap.css" />
+<link rel="stylesheet" href="~/CSS/icomoon.css" />
+<link rel="stylesheet" href="~/CSS/owl.carousel.min.css" />
+<link rel="stylesheet" href="~/CSS/owl.theme.default.min.css" />
+<link rel="stylesheet" href="~/CSS/style.css" />
+
+<div class="gtco-section border-bottom">
+    <div class="gtco-container">
+        <div class="row">
+            <!-- Cột thông tin tour -->
+            <div class="col-md-8 animate-box">
+                <h3 class="section-title">Thông tin chi tiết tour</h3>
+                <div class="tour-info">
+                    <div class="form-group">
+                        <span class="label">Tên tour: </span>
+                        <span class="value">@Model.TieuDe</span>
+                    </div>
+                    <div class="form-group">
+                        <span class="label">Mô tả: </span>
+                        <span class="value">@Model.BaiViet</span>
+                    </div>
+                    <div class="form-group">
+                        <span class="label">Ngày đi: </span>
+                        <span class="value">@Model.TripStart</span>
+                    </div>
+                    <div class="form-group">
+                        <span class="label">Ngày về: </span>
+                        <span class="value">@Model.TripEnd</span>
+                    </div>
+                    <div class="form-group">
+                        <span class="label">Lịch trình: </span>
+                        @if (!string.IsNullOrEmpty(Model.LichTrinh))
+                        {
+                            var itineraryLines = Model.LichTrinh.Split(new[] { '.', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                            foreach (var line in itineraryLines)
+                            {
+                                <p>@line</p>
+                            }
+                        }
+                        else
+                        {
+                            <p>Không có lịch trình.</p>
+                        }
+                    </div>
+                    <div class="form-group">
+                        <span class="label">Số người tối đa: </span>
+                        <span class="value">@Model.SoNguoiToiDa</span>
+                    </div>
+                    <div class="form-group">
+                        <span class="label">Phương tiện: </span>
+                        <span class="value">@Model.PhuongTien</span>
+                    </div>
+                    <div class="form-group">
+                        <span class="label">Giá Tour: </span>
+                        <span class="value">@Convert.ToDecimal(Model.GiaTour).ToString("0.##") USD</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cột hình ảnh tour -->
+            <div class="col-md-4 animate-box">
+                <h3 class="section-title">Hình ảnh tour</h3>
+                <div class="tour-image-container">
+                    <img src="@Model.HinhAnh" alt="Tour Image" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Nút hành động -->
+        <div class="action-buttons text-center mt-4">
+            <a href="@Url.Action("Create", "Booking", new { id = @Model.ID })" class="btn btn-primary">Giữ chỗ</a>
+            <div class="back-to-home mt-2">
+                @Html.ActionLink("Quay về trang chủ", "Home", "Home")
+            </div>
+        </div>
+
+        <!-- Phần đánh giá -->
+        <div class="review-section border-top mt-4 pt-3">
+            <div class="tour-review-container">
+                <h4 class="section-title">Cảm nhận của bạn về tour?</h4>
+                <form id="rateForm" method="post" action="@Url.Action("AddReview", "DetailTour")">
+                    <input type="hidden" name="tourId" value="@Model.ID" />
+                    <div id="stars" class="star-rating mb-4">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <input type="hidden" id="DanhGiaSao" name="DanhGiaSao" value="0" />
+                    <div class="form-group">
+                        <label for="NhanXet">Nhận xét của bạn:</label>
+                        <textarea id="NhanXet" name="NhanXet" class="form-control" rows="5" placeholder="Viết nhận xét về tour"></textarea>
+                    </div>
+                    <input type="submit" value="Gửi đánh giá" class="submit-btn" />
+                </form>
+            </div>
+
+            <!-- Đánh giá từ người khác -->
+            <div class="user-reviews-container mt-5">
+                <h4 class="section-title">Đánh giá từ những người khác</h4>
+                <div id="reviews">
+                    @if (Model.DanhGias != null && Model.DanhGias.Any())
+                    {
+                        foreach (var review in Model.DanhGias)
+                        {
+                            <div class="user-review">
+                                <p class="user-name">@review.TaiKhoan.TenHienThi</p>
+                                <div class="user-stars">
+                                    @for (int i = 1; i <= 5; i++)
+                                    {
+                                        <span class="star @((i <= review.DanhGiaSao) ? "selected" : "")">&#9733;</span>
+                                    }
+                                </div>
+                                <p class="review-text">@review.NhanXet</p>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <p class="no-reviews">Chưa có đánh giá nào.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Cấu trúc chung */
+    .gtco-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Title */
+    .section-title {
+        color: #2D92CCCC;
+        font-size: 2.6rem; /* Tăng kích thước tiêu đề */
+        font-weight: bold;
+        margin-bottom: 20px;
+        border-bottom: 4px solid #2D92CCCC; /* Tăng độ dày đường viền dưới */
+        padding-bottom: 10px;
+        background-color: #f4f8fb; /* Màu nền nhạt để tiêu đề nổi bật */
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 5px;
+    }
+
+    /* Thông tin tour */
+    .tour-info .form-group {
+        margin-bottom: 20px;
+    }
+
+    .label {
+        font-weight: bold;
+        font-size: 1.4rem; /* Tăng kích thước chữ label */
+        color: #333;
+    }
+
+    .value {
+        font-size: 1.8rem; /* Tăng kích thước chữ giá trị */
+        color: #555;
+    }
+
+    .tour-image-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    /* Bố cục hành động */
+    .action-buttons {
+        margin-top: 30px;
+    }
+
+    .btn-primary {
+        background-color: #2D92CCCC;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem; /* Tăng kích thước chữ nút */
+    }
+
+        .btn-primary:hover {
+            background-color: #218838;
+        }
+
+    .back-to-home {
+        margin-top: 10px;
+        font-size: 1.4rem;
+    }
+
+    /* Đánh giá tour */
+    .star-rating {
+        display: flex;
+        gap: 15px;
+        font-size: 2.5rem; /* Tăng kích thước sao */
+        color: #ccc;
+        cursor: pointer;
+    }
+
+        .star-rating .star.selected {
+            color: gold;
+        }
+
+    .submit-btn {
+        background-color: #2D92CCCC;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+
+    /* Đánh giá người dùng */
+    .user-review {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .user-name {
+        font-weight: bold;
+        font-size: 1.8rem; /* Tăng kích thước tên người dùng */
+        margin-bottom: 5px;
+    }
+
+    .user-stars {
+        font-size: 2.0rem;
+        color: gold;
+    }
+
+    .review-text {
+        font-size: 1.6rem;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    .no-reviews {
+        font-size: 1.4rem;
+        color: #777;
+        text-align: center;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const stars = document.querySelectorAll('.star');
+        const ratingInput = document.getElementById('DanhGiaSao');
+
+        stars.forEach(star => {
+            star.addEventListener('click', function () {
+                const rating = parseInt(star.getAttribute('data-value'));
+                ratingInput.value = rating;
+
+                stars.forEach((star, index) => {
+                    star.classList.toggle('selected', index < rating);
+                });
+            });
+        });
+    });
+</script>

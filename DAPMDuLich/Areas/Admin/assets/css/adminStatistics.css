@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace DAPMDuLich.Areas.Admin.assets.css
+{
+	public class adminStatistics
+{
+	body
+
+{
+	background-color: #f4f4f4;
+	font-family: Arial, sans-serif;
+}
+
+.header-title {
+	color: #007bff;
+	font-size: 2rem;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.card {
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+	background-color: #ffffff;
+}
+
+.card-header {
+	background-color: #007bff;
+	color: white;
+	border-radius: 15px 15px 0 0;
+	padding: 10px 15px;
+}
+
+.list-group-item {
+	background-color: #ffffff;
+	border: none;
+	border-bottom: 1px solid #e9ecef;
+	font-size: 1.2rem;
+}
+
+.table th {
+	background-color: #007bff;
+	color: white;
+	font-weight: bold;
+}
+
+.table td {
+	font-size: 1.1rem;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+	background-color: #f2f2f2;
+}
+
+.table-striped tbody tr:hover {
+	background-color: #e9ecef;
+}
+
+.table {
+	border-radius: 15px;
+	overflow: hidden;
+}
+	}
+}

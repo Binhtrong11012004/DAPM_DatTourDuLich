@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DAPMDuLichModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Contributor">
+    <Key>
+      <PropertyRef Name="ContributorID" />
+    </Key>
+    <Property Name="ContributorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContributorName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContributorPassword" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContributorNickName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContributorEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContributorPhone" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ContributorAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateAt" Type="datetime" Nullable="false" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Tien" Type="money" />
+  </EntityType>
+  <EntityType Name="DanhGia">
+    <Key>
+      <PropertyRef Name="ID_DanhGia" />
+    </Key>
+    <Property Name="ID_DanhGia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Type="int" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="DanhGiaSao" Type="int" />
+    <Property Name="ThoiGianDanhGia" Type="datetime" />
+    <Property Name="NhanXet" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="DatTour">
+    <Key>
+      <PropertyRef Name="BookingID" />
+    </Key>
+    <Property Name="BookingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Type="int" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="CreateAt" Type="datetime" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="ThanhToan" Type="bit" />
+    <Property Name="MaThanhToan" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContributorID" Type="int" />
+    <Property Name="ThanhToan50" Type="bit" />
+  </EntityType>
+  <EntityType Name="DatTourChiTiet">
+    <Key>
+      <PropertyRef Name="BookingDetailID" />
+    </Key>
+    <Property Name="BookingDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookingID" Type="int" Nullable="false" />
+    <Property Name="Price" Type="money" />
+    <Property Name="TravelerCount" Type="int" Nullable="false" />
+    <Property Name="CreateAt" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoaiTour">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCapCha" Type="int" />
+    <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MucGia">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Gia" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Notifications">
+    <Key>
+      <PropertyRef Name="NotificationID" />
+    </Key>
+    <Property Name="NotificationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContributorID" Type="int" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="ID" Type="int" />
+    <Property Name="BookingID" Type="int" />
+    <Property Name="IsRead" Type="bit" />
+    <Property Name="CreateAt" Type="datetime" />
+    <Property Name="ReceiverRole" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenDangNhap" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="MatKhau" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenHienThi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SoDienThoai" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateAt" Type="datetime" Nullable="false" />
+    <Property Name="Role" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Tien" Type="money" />
+  </EntityType>
+  <EntityType Name="TinhThanh">
+    <Key>
+      <PropertyRef Name="ID_Tinh" />
+    </Key>
+    <Property Name="ID_Tinh" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ten" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="TourDuLich">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TieuDe" Type="nvarchar" MaxLength="255" />
+    <Property Name="HinhAnh" Type="nvarchar(max)" />
+    <Property Name="TripStart" Type="datetime" />
+    <Property Name="TripEnd" Type="datetime" />
+    <Property Name="LichTrinh" Type="nvarchar(max)" />
+    <Property Name="DiaDiem" Type="nvarchar(max)" />
+    <Property Name="SoNguoiToiDa" Type="int" />
+    <Property Name="PhuongTien" Type="nvarchar" MaxLength="100" />
+    <Property Name="GiaTour" Type="money" />
+    <Property Name="BaiViet" Type="nvarchar(max)" />
+    <Property Name="idTinh" Type="int" />
+    <Property Name="idLoaiTour" Type="int" />
+    <Property Name="idMucGia" Type="int" />
+    <Property Name="ContributorID" Type="int" Nullable="false" />
+    <Property Name="Status" Type="char" MaxLength="1" />
+    <Property Name="RejectionNote" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK__DatTourCh__Booki__5629CD9C">
+    <End Role="DatTour" Type="Self.DatTour" Multiplicity="1" />
+    <End Role="DatTourChiTiet" Type="Self.DatTourChiTiet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DatTour">
+        <PropertyRef Name="BookingID" />
+      </Principal>
+      <Dependent Role="DatTourChiTiet">
+        <PropertyRef Name="BookingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DanhGia_TaiKhoan">
+    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+    <End Role="DanhGia" Type="Self.DanhGia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaiKhoan">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="DanhGia">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DanhGia_TourDuLich">
+    <End Role="TourDuLich" Type="Self.TourDuLich" Multiplicity="0..1" />
+    <End Role="DanhGia" Type="Self.DanhGia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TourDuLich">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DanhGia">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DatTour_Contributor">
+    <End Role="Contributor" Type="Self.Contributor" Multiplicity="0..1" />
+    <End Role="DatTour" Type="Self.DatTour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contributor">
+        <PropertyRef Name="ContributorID" />
+      </Principal>
+      <Dependent Role="DatTour">
+        <PropertyRef Name="ContributorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DatTour_TaiKhoan">
+    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DatTour" Type="Self.DatTour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaiKhoan">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="DatTour">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DatTour_TourDuLich">
+    <End Role="TourDuLich" Type="Self.TourDuLich" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DatTour" Type="Self.DatTour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TourDuLich">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DatTour">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Notifications_Contributor">
+    <End Role="Contributor" Type="Self.Contributor" Multiplicity="0..1" />
+    <End Role="Notifications" Type="Self.Notifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contributor">
+        <PropertyRef Name="ContributorID" />
+      </Principal>
+      <Dependent Role="Notifications">
+        <PropertyRef Name="ContributorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Notifications_Contributor1">
+    <End Role="Contributor" Type="Self.Contributor" Multiplicity="0..1" />
+    <End Role="Notifications" Type="Self.Notifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contributor">
+        <PropertyRef Name="ContributorID" />
+      </Principal>
+      <Dependent Role="Notifications">
+        <PropertyRef Name="ContributorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Notifications_DatTour">
+    <End Role="DatTour" Type="Self.DatTour" Multiplicity="0..1" />
+    <End Role="Notifications" Type="Self.Notifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DatTour">
+        <PropertyRef Name="BookingID" />
+      </Principal>
+      <Dependent Role="Notifications">
+        <PropertyRef Name="BookingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Notifications_TaiKhoan">
+    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+    <End Role="Notifications" Type="Self.Notifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaiKhoan">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Notifications">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Notifications_TourDuLich">
+    <End Role="TourDuLich" Type="Self.TourDuLich" Multiplicity="0..1" />
+    <End Role="Notifications" Type="Self.Notifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TourDuLich">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Notifications">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TourDuLich_Contributor">
+    <End Role="Contributor" Type="Self.Contributor" Multiplicity="1" />
+    <End Role="TourDuLich" Type="Self.TourDuLich" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contributor">
+        <PropertyRef Name="ContributorID" />
+      </Principal>
+      <Dependent Role="TourDuLich">
+        <PropertyRef Name="ContributorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TourDuLich_LoaiTour">
+    <End Role="LoaiTour" Type="Self.LoaiTour" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TourDuLich" Type="Self.TourDuLich" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiTour">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TourDuLich">
+        <PropertyRef Name="idLoaiTour" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TourDuLich_MucGia">
+    <End Role="MucGia" Type="Self.MucGia" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TourDuLich" Type="Self.TourDuLich" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MucGia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TourDuLich">
+        <PropertyRef Name="idMucGia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TourDuLich_TinhThanh">
+    <End Role="TinhThanh" Type="Self.TinhThanh" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TourDuLich" Type="Self.TourDuLich" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TinhThanh">
+        <PropertyRef Name="ID_Tinh" />
+      </Principal>
+      <Dependent Role="TourDuLich">
+        <PropertyRef Name="idTinh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DAPMDuLichModelStoreContainer">
+    <EntitySet Name="Contributor" EntityType="Self.Contributor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DanhGia" EntityType="Self.DanhGia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DatTour" EntityType="Self.DatTour" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DatTourChiTiet" EntityType="Self.DatTourChiTiet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoaiTour" EntityType="Self.LoaiTour" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MucGia" EntityType="Self.MucGia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notifications" EntityType="Self.Notifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TinhThanh" EntityType="Self.TinhThanh" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TourDuLich" EntityType="Self.TourDuLich" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__DatTourCh__Booki__5629CD9C" Association="Self.FK__DatTourCh__Booki__5629CD9C">
+      <End Role="DatTour" EntitySet="DatTour" />
+      <End Role="DatTourChiTiet" EntitySet="DatTourChiTiet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DanhGia_TaiKhoan" Association="Self.FK_DanhGia_TaiKhoan">
+      <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+      <End Role="DanhGia" EntitySet="DanhGia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DanhGia_TourDuLich" Association="Self.FK_DanhGia_TourDuLich">
+      <End Role="TourDuLich" EntitySet="TourDuLich" />
+      <End Role="DanhGia" EntitySet="DanhGia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DatTour_Contributor" Association="Self.FK_DatTour_Contributor">
+      <End Role="Contributor" EntitySet="Contributor" />
+      <End Role="DatTour" EntitySet="DatTour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DatTour_TaiKhoan" Association="Self.FK_DatTour_TaiKhoan">
+      <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+      <End Role="DatTour" EntitySet="DatTour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DatTour_TourDuLich" Association="Self.FK_DatTour_TourDuLich">
+      <End Role="TourDuLich" EntitySet="TourDuLich" />
+      <End Role="DatTour" EntitySet="DatTour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Notifications_Contributor" Association="Self.FK_Notifications_Contributor">
+      <End Role="Contributor" EntitySet="Contributor" />
+      <End Role="Notifications" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Notifications_Contributor1" Association="Self.FK_Notifications_Contributor1">
+      <End Role="Contributor" EntitySet="Contributor" />
+      <End Role="Notifications" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Notifications_DatTour" Association="Self.FK_Notifications_DatTour">
+      <End Role="DatTour" EntitySet="DatTour" />
+      <End Role="Notifications" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Notifications_TaiKhoan" Association="Self.FK_Notifications_TaiKhoan">
+      <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+      <End Role="Notifications" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Notifications_TourDuLich" Association="Self.FK_Notifications_TourDuLich">
+      <End Role="TourDuLich" EntitySet="TourDuLich" />
+      <End Role="Notifications" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TourDuLich_Contributor" Association="Self.FK_TourDuLich_Contributor">
+      <End Role="Contributor" EntitySet="Contributor" />
+      <End Role="TourDuLich" EntitySet="TourDuLich" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TourDuLich_LoaiTour" Association="Self.FK_TourDuLich_LoaiTour">
+      <End Role="LoaiTour" EntitySet="LoaiTour" />
+      <End Role="TourDuLich" EntitySet="TourDuLich" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TourDuLich_MucGia" Association="Self.FK_TourDuLich_MucGia">
+      <End Role="MucGia" EntitySet="MucGia" />
+      <End Role="TourDuLich" EntitySet="TourDuLich" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TourDuLich_TinhThanh" Association="Self.FK_TourDuLich_TinhThanh">
+      <End Role="TinhThanh" EntitySet="TinhThanh" />
+      <End Role="TourDuLich" EntitySet="TourDuLich" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

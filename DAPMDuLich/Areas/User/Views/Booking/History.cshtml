@@ -1,0 +1,203 @@
+﻿@model IEnumerable<DAPMDuLich.Models.DatTour>
+@{
+    ViewBag.Title = "History";
+    Layout = "~/Areas/User/Views/Shared/LayoutDatTour.cshtml";
+}
+
+<link rel="stylesheet" href="~/CSS/animate.css" />
+<link rel="stylesheet" href="~/CSS/bootstrap.css" />
+<link rel="stylesheet" href="~/CSS/icomoon.css" />
+<link rel="stylesheet" href="~/CSS/owl.carousel.min.css" />
+<link rel="stylesheet" href="~/CSS/owl.theme.default.min.css" />
+<link rel="stylesheet" href="~/CSS/style.css" />
+
+<h2 class="page-title">Lịch sử đặt tour</h2>
+
+<style>
+    /* Phong cách chung cho bảng */
+    .page-title {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    /* Thiết kế bảng hiện đại */
+    table.table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style cho hàng tiêu đề */
+    table th {
+        background-color: #4CAF50;
+        color: white;
+        text-align: left;
+        padding: 12px 15px;
+    }
+
+    /* Style cho các ô trong bảng */
+    table td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Các trạng thái thanh toán */
+    .badge {
+        padding: 5px 10px;
+        border-radius: 20px;
+        color: white;
+        font-size: 0.9em;
+    }
+
+    .badge-success {
+        background-color: #28a745;
+    }
+
+    .badge-warning {
+        background-color: #ffc107;
+    }
+
+    .badge-danger {
+        background-color: #dc3545;
+    }
+
+    /* Style cho các nút */
+    .btn {
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.9em;
+        transition: all 0.3s ease;
+    }
+
+    .btn-info {
+        background-color: #17a2b8;
+        color: white;
+    }
+
+        .btn-info:hover {
+            background-color: #138496;
+        }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: white;
+    }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+
+    .btn-success {
+        background-color: #28a745;
+        color: white;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+    .btn-neutral {
+        background-color: #6c757d;
+        color: white;
+    }
+
+        .btn-neutral:hover {
+            background-color: #5a6268;
+        }
+
+    /* Hiệu ứng hover cho hàng trong bảng */
+    table tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Style cho các nút trạng thái tour */
+    button.btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+    }
+
+    button.btn-neutral {
+        background-color: #6c757d;
+    }
+
+    button.btn-success {
+        background-color: #28a745;
+    }
+
+    button.btn-danger {
+        background-color: #dc3545;
+    }
+
+    button.btn:hover {
+        transform: scale(1.1);
+    }
+</style>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tên tour</th>
+            <th>Trạng Thái Đặt Tour</th>
+            <th>Ngày tạo đơn đặt</th>
+            <th>Trạng thái thanh toán</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="@(item.ThanhToan.HasValue && item.ThanhToan.Value ? "paid" : "unpaid")">
+                <td>@Html.DisplayFor(modelItem => item.TourDuLich.TieuDe)</td>
+                <td>
+                    @{
+                        if (item.Status == null)
+                        {
+                            <button class="btn btn-neutral"></button>
+                        }
+                        else if (item.Status == true)
+                        {
+                            <button class="btn btn-success"></button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-danger"></button>
+                        }
+                    }
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.CreateAt)</td>
+                <td>
+                    @if (item.ThanhToan.HasValue && item.ThanhToan.Value == true)
+                    {
+                        <span class="badge badge-success">Đã thanh toán 100%</span>
+                    }
+                    else if (item.ThanhToan50.HasValue && item.ThanhToan50.Value == true)
+                    {
+                        <span class="badge badge-warning">Đã thanh toán 50%</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-danger">Chưa thanh toán</span>
+                    }
+                </td>
+                <td>
+                    @Html.ActionLink("Chi tiết tour", "Details", "BookingDetail", new { id = item.BookingID }, new { @type = "button", @class = "btn btn-info" })
+
+                    @if (!item.ThanhToan50.HasValue && (!item.ThanhToan.HasValue || item.ThanhToan.Value == false))
+                    {
+                        @Html.ActionLink("Hủy Tour", "Delete", "Booking", new { id = item.BookingID }, new { @type = "button", @class = "btn btn-danger" })
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

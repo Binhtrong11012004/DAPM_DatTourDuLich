@@ -1,0 +1,76 @@
+﻿@model IEnumerable<DAPMDuLich.Models.DatTour>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Admin/Views/Shared/layoutadmin.cshtml";
+    int i = 0;
+}
+
+<div class="row" style="margin-top:50px">
+    <h3 style="font-family: 'Roboto', sans-serif; font-size: 32px; text-align: center; font-weight: bold;padding-left:450px;">
+        DANH SÁCH ĐƠN ĐƯỢC ĐẶT TỪ CÁC CÔNG TY
+    </h3>
+
+    <div class="col-md-12 mb-4">
+        <form action="@Url.Action("Search", "Booking", new { area = "Admin" })" method="get" class="form-inline">
+            <div class="form-group mr-3">
+                <label for="searchQuery" class="mr-2" style="font-family: 'Roboto', sans-serif;">Tìm kiếm:</label>
+                <input type="text" name="searchQuery" id="searchQuery" class="form-control" placeholder="BookingID, Tên công ty, Tên khách hàng" style="font-family: 'Roboto', sans-serif;">
+            </div>
+            <div class="form-group mr-3">
+                <label for="createAt" class="mr-2" style="font-family: 'Roboto', sans-serif;">Ngày Tạo:</label>
+                <input type="date" name="createAt" id="createAt" class="form-control" style="font-family: 'Roboto', sans-serif;">
+            </div>
+            <button type="submit" class="btn btn-primary" style="font-family: 'Roboto', sans-serif;">Tìm kiếm</button>
+        </form>
+    </div>
+
+    <div class="col-md-12">
+        <table class="table table-bordered" style="font-family: 'Roboto', sans-serif;">
+            <tr>
+                <th>STT</th>
+                <th>ID Booking Tour</th>
+                <th>Tên Khách Hàng</th>
+                <th>Tên công ty</th>
+                <th>Ngày Tạo</th>
+                <th>Trạng Thái Đặt Tour</th>
+                <th>#</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                i++;
+                <tr>
+                    <td>@i</td>
+                    <td>@item.BookingID</td>
+                    <td>@item.TaiKhoan.TenHienThi</td>
+                    <td>@item.Contributor.ContributorNickName</td>
+                    <td>@item.CreateAt</td>
+                    <td>
+                        @if (item.Status == null)
+                        {
+                            <span class="label label-default" style="font-family: 'Roboto', sans-serif;">Chưa xác định</span>
+                        }
+                        else if (item.Status == true)
+                        {
+                            <span class="label label-success" style="font-family: 'Roboto', sans-serif;">Đã xác nhận</span>
+                        }
+                        else
+                        {
+                            <span class="label label-danger" style="font-family: 'Roboto', sans-serif;">Đã hủy</span>
+                        }
+                    </td>
+                    <td>
+                        @Html.ActionLink("Danh Sách Chi Tiết", "Details", "BookingDetail", new { id = item.BookingID }, new { style = "font-family: 'Roboto', sans-serif;" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+
+<style>
+    body, h3, table, form, label, input, button, th, td {
+        font-family: 'Roboto', sans-serif;
+    }
+</style>

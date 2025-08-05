@@ -1,0 +1,96 @@
+﻿@model IEnumerable<DAPMDuLich.Models.Contributor>
+@{
+    ViewBag.Title = "Danh Sách Tài Khoản Người Cung Cấp";
+    Layout = "~/Areas/Admin/Views/Shared/layoutadmin.cshtml";
+    int i = 0;
+}
+
+<div class="row" style="margin-top:50px">
+    <div class="col-md-12">
+        <h3>DANH SÁCH TÀI KHOẢN NGƯỜI CUNG CẤP</h3>
+    </div>
+    <div class="col-md-12">
+        <p>
+            <a href="@Url.Action("Create", "AccountContributor")" class="btn btn-primary">Thêm mới</a>
+        </p>
+        @if (!Model.Any())
+        {
+            <p>Không tìm thấy tài khoản người cung cấp nào phù hợp với từ khóa tìm kiếm.</p>
+        }
+        else
+        {
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>ID Contributor</th>
+                        <th>Tên Đăng Nhập</th>
+                        <th>Mật Khẩu</th>
+                        <th>Tên Công Ty</th>
+                        <th>Email</th>
+                        <th>Số Điện Thoại</th>
+                        <th>Địa Chỉ</th>
+                        <th>Ngày Tạo</th>
+                        <th>Số tiền hiện có</th>
+                        @*<th>#</th>*@
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        i++;
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.ContributorID</td>
+                            <td>@item.ContributorName</td>
+                            <td>
+                                <div class="input-group">
+                                    <input type="password" value="@item.ContributorPassword" id="password-contributor-@item.ContributorID" class="form-control password-field" readonly />
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-outline-secondary toggle-password" data-target="#password-contributor-@item.ContributorID" data-userid="@item.ContributorID">
+                                            Xem
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>@item.ContributorNickName</td>
+                            <td>@item.ContributorEmail</td>
+                            <td>@item.ContributorPhone</td>
+                            <td>@item.ContributorAddress</td>
+                            <td>@item.CreateAt.ToString("dd/MM/yyyy")</td>
+                            <td>@(Convert.ToDecimal(item.Tien).ToString("0.##")) USD</td>
+                            @*<td>
+                                @Html.ActionLink("Cập nhật", "Edit", "AccountContributor", new { id = item.ContributorID })
+                            </td>*@
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+
+<!-- Thêm Script để Xử Lý Toggling Mật Khẩu -->
+@section script {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const togglePasswordButtons = document.querySelectorAll('.toggle-password');
+
+            togglePasswordButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const targetSelector = this.getAttribute('data-target');
+                    const passwordInput = document.querySelector(targetSelector);
+                    const userId = this.getAttribute('data-userid');
+
+                    if (passwordInput.type === 'password') {
+                        passwordInput.type = 'text';
+                        this.textContent = 'Ẩn'; // Thay đổi chữ thành "Ẩn"
+                    } else {
+                        passwordInput.type = 'password';
+                        this.textContent = 'Xem'; // Thay đổi chữ thành "Xem"
+                    }
+                });
+            });
+        });
+    </script>
+}

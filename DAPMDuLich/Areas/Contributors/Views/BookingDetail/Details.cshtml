@@ -1,0 +1,148 @@
+﻿@model IEnumerable<DAPMDuLich.Models.DatTourChiTiet>
+
+@{
+    ViewBag.Title = "Chi tiết đơn đặt tour";
+    Layout = "~/Areas/Contributors/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chi tiết đơn đặt tour</h2>
+
+<div class="order-details">
+    <div class="order-header">
+        <h3>Thông tin đơn hàng</h3>
+        <p><strong>BookingID:</strong> @(Model.FirstOrDefault()?.DatTour?.BookingID.ToString() ?? "Không có dữ liệu")</p>
+        <p><strong>Tên khách hàng:</strong> @(Model.FirstOrDefault()?.DatTour?.TaiKhoan?.TenDangNhap ?? "Không có dữ liệu")</p>
+        <p><strong>Số điện thoại:</strong> @(Model.FirstOrDefault()?.DatTour?.TaiKhoan?.SoDienThoai ?? "Không có dữ liệu")</p>
+        <p><strong>Tour du lịch:</strong> @(Model.FirstOrDefault()?.DatTour?.TourDuLich?.TieuDe ?? "Không có dữ liệu")</p>
+        <p><strong>Ngày tạo:</strong> @(Model.FirstOrDefault()?.DatTour?.CreateAt?.ToString("dd/MM/yyyy") ?? "Không có dữ liệu")</p>
+        <p>
+            <strong>Trạng thái thanh toán:</strong>
+            @if (Model.FirstOrDefault()?.DatTour?.ThanhToan == true)
+            {
+                <span class="badge badge-success">Đã thanh toán 100%</span>
+            }
+            else if (Model.FirstOrDefault()?.DatTour?.ThanhToan50 == true)
+            {
+                <span class="badge badge-warning">Đã thanh toán 50%</span>
+            }
+            else
+            {
+                <span class="badge badge-danger">Chưa thanh toán</span>
+            }
+        </p>
+    </div>
+    <hr />
+
+    <h4>Chi tiết đặt tour</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Booking Detail ID</th>
+                <th>Giá</th>
+                <th>Số lượng người</th>
+                <th>Ngày tạo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var detail in Model)
+            {
+                <tr>
+                    <td>@detail.BookingDetailID</td>
+                    <td>
+                        @if (detail.Price.HasValue)
+                        {
+                            @detail.Price.Value.ToString("C2", System.Globalization.CultureInfo.GetCultureInfo("en-US"))
+                        }
+                        else
+                        {
+                            <span>0.00</span>
+                        }
+                    </td>
+                    <td>@detail.TravelerCount</td>
+                    <td>@detail.CreateAt.ToString("dd/MM/yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <p>
+        <a href="@Url.Action("List", "Booking")" class="btn btn-primary">Quay về danh sách</a>
+    </p>
+</div>
+
+<style>
+    .order-details {
+        font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f7f9fc;
+    }
+
+    .order-header {
+        background-color: #dce6f7; /* Màu xanh nhạt cho header */
+        color: #333;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+        .order-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .order-header p {
+            margin: 5px 0;
+        }
+
+    .badge {
+        font-size: 14px;
+        padding: 5px 10px;
+        border-radius: 12px;
+    }
+
+    .badge-success {
+        background-color: #66c17a; /* Xanh đậm hơn cho trạng thái Đã thanh toán */
+        color: #fff;
+    }
+
+    .badge-warning {
+        background-color: #ffb74d; /* Cam đậm hơn cho trạng thái Chưa thanh toán */
+        color: #fff;
+    }
+
+    .table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+
+        .table thead th {
+            background-color: #f0f3f8;
+            color: #555;
+            font-weight: 600;
+        }
+
+    .table-striped tbody tr:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
+
+    .table-striped tbody tr:nth-child(even) {
+        background-color: #eef2f9;
+    }
+
+    .btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #6ca0dc; /* Gradient màu xanh nhẹ */
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        .btn:hover {
+            background-color: #4e8dc1; /* Màu xanh đậm hơn khi hover */
+        }
+</style>

@@ -1,0 +1,216 @@
+﻿@model DAPMDuLich.Models.TaiKhoan
+
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Areas/User/Views/Shared/LayoutDN.cshtml";
+}
+
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+
+<body>
+    <canvas id="projector"></canvas> <!-- Snowflake Canvas -->
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="register-container">
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <label for="fullname">Tên đầy đủ(*)</label>
+                @Html.EditorFor(model => model.TenHienThi, new { htmlAttributes = new { @class = "form-control", @id = "fullname" } })
+                @Html.ValidationMessageFor(model => model.TenHienThi, "", new { @class = "text-danger" })
+
+                <label for="Username">Tên đăng nhập(*)</label>
+                @Html.EditorFor(model => model.TenDangNhap, new { htmlAttributes = new { @class = "form-control", @id = "fullname" } })
+                @Html.ValidationMessageFor(model => model.TenDangNhap, "", new { @class = "text-danger" })
+
+                <label for="email">Địa chỉ email(*)</label>
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @id = "email" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                <label for="password">Số Điện Thoại(*)</label>
+                @Html.EditorFor(model => model.SoDienThoai, new { htmlAttributes = new { @class = "form-control", @type = "phone", @id = "phone" } })
+                @Html.ValidationMessageFor(model => model.SoDienThoai, "", new { @class = "text-danger" })
+
+                <label for="password">Địa chỉ(*)</label>
+                @Html.EditorFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control", @type = "address", @id = "address" } })
+                @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+
+                <label for="password">Mật khẩu(*)</label>
+                @Html.EditorFor(model => model.MatKhau, new { htmlAttributes = new { @class = "form-control", @type = "password", @id = "password" } })
+                @Html.ValidationMessageFor(model => model.MatKhau, "", new { @class = "text-danger" })
+
+                <label for="confirmPassword">Xác nhận mật khẩu(*)</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-primary">Đăng Ký</button>
+                    <button type="reset" class="btn-secondary">Hủy</button>
+                </div>
+
+                <div class="login-link">
+                    Đã có tài khoản? <a href="~/Areas/User/Views/Auth/Login.cshtml">Đăng nhập</a>
+                </div>
+            </div>
+        </div>
+    }
+
+    <script>
+        // Snowflake animation script
+        var canvas, ctx, snowflakes = [];
+
+        function setupCanvas() {
+            canvas = document.getElementById("projector");
+            ctx = canvas.getContext("2d");
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            for (var i = 0; i < 200; i++) {
+                snowflakes.push(createSnowflake());
+            }
+
+            animateSnowflakes();
+        }
+
+        function createSnowflake() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                size: Math.random() * 5 + 2,
+                alpha: Math.random() * 0.5 + 0.3,
+                speedY: Math.random() * 1 + 0.5,
+                speedX: Math.random() * 0.5 - 0.25
+            };
+        }
+
+        function updateSnowflakes() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            snowflakes.forEach(function (snowflake) {
+                snowflake.y += snowflake.speedY;
+
+                if (snowflake.y > canvas.height) {
+                    snowflake.y = -snowflake.size;
+                    snowflake.x = Math.random() * canvas.width;
+                }
+
+                snowflake.x += snowflake.speedX;
+
+                if (snowflake.x > canvas.width) snowflake.x = 0;
+                if (snowflake.x < 0) snowflake.x = canvas.width;
+
+                ctx.fillStyle = "#FFFFFF";
+                ctx.globalAlpha = snowflake.alpha;
+                ctx.beginPath();
+                ctx.arc(snowflake.x, snowflake.y, snowflake.size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+        }
+
+        function animateSnowflakes() {
+            updateSnowflakes();
+            requestAnimationFrame(animateSnowflakes);
+        }
+
+        window.onload = setupCanvas;
+    </script>
+
+    <style>
+        body {
+            background-image: url('/Areas/User/assets/HinhAnh/dangky.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Make sure canvas doesn't block clicks */
+        }
+
+        .register-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 320px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1; /* Ensure the form is above the snowflakes */
+            position: relative;
+        }
+
+            .register-container h2 {
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            .register-container label {
+                font-size: 14px;
+            }
+
+            .register-container input {
+                width: 100%;
+                padding: 8px;
+                margin: 8px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 14px;
+            }
+
+            .register-container .button-group {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .register-container button {
+                width: 48%;
+                padding: 8px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 14px;
+            }
+
+            .register-container .btn-primary {
+                background-color: #007BFF;
+                color: white;
+            }
+
+                .register-container .btn-primary:hover {
+                    background-color: #0056b3;
+                }
+
+            .register-container .btn-secondary {
+                background-color: #dc3545;
+                color: white;
+            }
+
+                .register-container .btn-secondary:hover {
+                    background-color: #c82333;
+                }
+
+            .register-container .login-link {
+                display: block;
+                text-align: center;
+                margin-top: 10px;
+                font-size: 14px;
+                color: black;
+            }
+
+                .register-container .login-link a {
+                    color: #007BFF;
+                    text-decoration: none;
+                }
+    </style>
+</body>

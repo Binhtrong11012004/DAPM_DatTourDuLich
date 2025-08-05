@@ -1,0 +1,74 @@
+﻿@model DAPMDuLich.Models.DatTour
+@{
+    ViewBag.Title = "Xóa Tour";
+    Layout = "~/Areas/Admin/Views/Shared/layoutadmin.cshtml";
+}
+
+<style>
+    .card {
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+    }
+
+    .card-header {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        color: white;
+    }
+
+    .btn-custom {
+        background-color: #6c63ff;
+        color: white;
+    }
+
+        .btn-custom:hover {
+            background-color: #5753d7;
+        }
+
+    <style >
+</style>
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Bạn có chắc chắn xóa tour này không?</h3>
+        </div>
+        <div class="card-body">
+
+            <dl class="row">
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.TourDuLich.TieuDe)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.TourDuLich.TieuDe)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.TaiKhoan.TenDangNhap)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.TaiKhoan.TenDangNhap)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Status)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Status)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.CreateAt)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.CreateAt)
+                </dd>
+            </dl>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    <input type="submit" value="Xóa" class="btn btn-danger" />
+                    @Html.ActionLink("Quay lại danh sách", "List", null, new { @class = "btn btn-custom ml-2" })
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/layoutadmin.cshtml";
+    var admin = (DAPMDuLich.Models.TaiKhoan)System.Web.HttpContext.Current.Session["admin"];
+}
+
+<div class="row" style="margin-top:70px">
+    <div class="col-md-12">
+        <h2>
+            Xin Chào @admin.TenHienThi
+        </h2>
+    </div>
+</div>
+

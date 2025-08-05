@@ -1,0 +1,57 @@
+.menu {
+    display: flex;
+    width: 100%;
+    background-color: #2c3e50;
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 13px; /* Adjust this value to create space */
+    /*position: fixed;*/
+    top: 40px;
+    z-index: 999;
+}
+
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0; /* Remove padding */
+        overflow: hidden;
+    }
+
+        .menu ul li {
+            display: inline-block;
+            padding: 14px 16px;
+        }
+
+            .menu ul li a {
+                color: #ecf0f1;
+                text-align: center;
+                text-decoration: none;
+            }
+
+            .menu ul li:hover {
+                background-color: #2980b9;
+            }
+
+            .menu ul li ul {
+                display: none;
+                position: absolute;
+                background-color: #bdc3c7;
+                min-width: 160px;
+                z-index: 1;
+            }
+
+                .menu ul li ul li {
+                    float: none;
+                    color: black;
+                    padding: 12px 16px;
+                }
+
+                    .menu ul li ul li a {
+                        color: black;
+                    }
+
+            .menu ul li:hover ul {
+                display: block;
+            }

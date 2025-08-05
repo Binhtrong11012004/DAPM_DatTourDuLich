@@ -1,0 +1,133 @@
+﻿@model DAPMDuLich.Models.TaiKhoan
+
+@{
+    ViewBag.Title = "Thông tin cá nhân";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/CSS/animate.css" />
+<link rel="stylesheet" href="~/CSS/bootstrap.css" />
+<link rel="stylesheet" href="~/CSS/icomoon.css" />
+<link rel="stylesheet" href="~/CSS/owl.carousel.min.css" />
+<link rel="stylesheet" href="~/CSS/owl.theme.default.min.css" />
+<link rel="stylesheet" href="~/CSS/style.css" />
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="info-card">
+                <h3 class="card-title" style="font-size: 3.0rem;">Thông tin cá nhân</h3>
+
+
+                <!-- Tên Đăng Nhập -->
+                <div class="info-item">
+                    <label>Tên Đăng Nhập:</label>
+                    <p class="info-text">@Html.DisplayFor(model => model.TenDangNhap)</p>
+                </div>
+
+                <!-- Họ Tên -->
+                <div class="info-item">
+                    <label>Họ Tên:</label>
+                    <p class="info-text">@Html.DisplayFor(model => model.TenHienThi)</p>
+                </div>
+
+                <!-- Email -->
+                <div class="info-item">
+                    <label>Email:</label>
+                    <p class="info-text">@Html.DisplayFor(model => model.Email)</p>
+                </div>
+
+                <!-- Số Điện Thoại -->
+                <div class="info-item">
+                    <label>Số điện thoại:</label>
+                    <p class="info-text">@Html.DisplayFor(model => model.SoDienThoai)</p>
+                </div>
+
+                <!-- Địa Chỉ -->
+                <div class="info-item">
+                    <label>Địa chỉ:</label>
+                    <p class="info-text">@Html.DisplayFor(model => model.DiaChi)</p>
+                </div>
+
+                <!-- Số tiền hiện có -->
+                <div class="info-item">
+                    <label>Số tiền hiện có:</label>
+                    <p class="info-text">@String.Format("{0:0.##}", Model.Tien) USD</p>
+                </div>
+
+                <!-- Chỉnh sửa button -->
+                <div class="action-btn">
+                    <a href="Edit" class="btn btn-primary">Chỉnh sửa</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+    }
+
+    .info-card {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin-top: 50px;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .info-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+    .card-title {
+        font-size: 3.0rem;
+        color: #4e4e4e;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+
+    .info-item {
+        margin-bottom: 20px;
+    }
+
+        .info-item label {
+            font-weight: bold;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+    .info-text {
+        font-size: 1.2rem;
+        color: #555;
+        margin-top: 5px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+    }
+
+    .action-btn {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+        .action-btn .btn {
+            background-color: #007bff;
+            color: white;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            .action-btn .btn:hover {
+                background-color: #0056b3;
+                cursor: pointer;
+            }
+    }
+</style>
+

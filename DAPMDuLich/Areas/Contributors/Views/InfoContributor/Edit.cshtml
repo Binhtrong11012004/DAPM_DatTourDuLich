@@ -1,0 +1,46 @@
+﻿@model DAPMDuLich.Models.Contributor
+@{
+    ViewBag.Title = "Chỉnh sửa thông tin cá nhân";
+    Layout = "~/Areas/Contributors/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chỉnh sửa thông tin cá nhân</h2>
+
+@using (Html.BeginForm("Edit", "InfoContributor", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label for="ContributorNickName">Tên hiển thị:</label>
+        @Html.TextBoxFor(m => m.ContributorNickName, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+
+    <div class="form-group">
+        <label for="ContributorEmail">Email:</label>
+        @Html.TextBoxFor(m => m.ContributorEmail, new { @class = "form-control", @readonly = "readonly" })
+       
+    </div>
+
+    <div class="form-group">
+        <label for="ContributorPhone">Số điện thoại:</label>
+        @Html.TextBoxFor(m => m.ContributorPhone, new { @class = "form-control", @readonly = "readonly" })
+      
+    </div>
+
+    <div class="form-group">
+        <label for="ContributorAddress">Địa chỉ:</label>
+        @Html.TextBoxFor(m => m.ContributorAddress, new { @class = "form-control", @readonly = "readonly" })
+        
+    </div>
+
+    <div class="form-group">
+        <label for="ContributorPassword">Mật khẩu:</label>
+        @Html.PasswordFor(m => m.ContributorPassword, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ContributorPassword, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Lưu" class="btn btn-primary" />
+        @Html.ActionLink("Hủy bỏ", "ViewProfile", "InfoContributor", null, new { @class = "btn btn-secondary" })
+    </div>
+}

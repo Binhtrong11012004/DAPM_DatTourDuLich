@@ -1,0 +1,64 @@
+Date: 10/6/2024 5:44:22 PM
+Message: BookingDetail not found.
+StackTrace:    at DAPMDuLich.Areas.User.Controllers.BookingDetailController.CreatePayment(APIContext apiContext, String redirectUrl) in D:\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 276
+   at DAPMDuLich.Areas.User.Controllers.BookingDetailController.PaymentWithPaypal(String Cancel) in D:\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 204
+
+Date: 10/6/2024 6:00:20 PM
+Message: Object reference not set to an instance of an object.
+StackTrace:    at DAPMDuLich.Areas.User.Controllers.BookingDetailController.CreatePayment(APIContext apiContext, String redirectUrl) in D:\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 287
+   at DAPMDuLich.Areas.User.Controllers.BookingDetailController.PaymentWithPaypal(String Cancel) in D:\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 210
+
+Date: 10/6/2024 7:17:21 PM
+Message: Object reference not set to an instance of an object.
+StackTrace:    at DAPMDuLich.Areas.User.Controllers.BookingDetailController.CreatePayment(APIContext apiContext, String redirectUrl) in D:\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 289
+   at DAPMDuLich.Areas.User.Controllers.BookingDetailController.PaymentWithPaypal(String Cancel) in D:\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 212
+
+Date: 10/6/2024 7:27:31 PM
+Message: No booking detail found in session.
+StackTrace:    at DAPMDuLich.Areas.User.Controllers.BookingDetailController.CreatePayment(APIContext apiContext, String redirectUrl) in D:\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 284
+   at DAPMDuLich.Areas.User.Controllers.BookingDetailController.PaymentWithPaypal(String Cancel) in D:\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 212
+
+Date: 10/6/2024 7:31:25 PM
+Message: No booking detail found in session.
+StackTrace:    at DAPMDuLich.Areas.User.Controllers.BookingDetailController.CreatePayment(APIContext apiContext, String redirectUrl) in D:\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 287
+   at DAPMDuLich.Areas.User.Controllers.BookingDetailController.PaymentWithPaypal(String Cancel) in D:\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 215
+
+Date: 10/6/2024 8:39:08 PM
+Message: Object reference not set to an instance of an object.
+StackTrace:    at DAPMDuLich.Areas.User.Controllers.BookingDetailController.PaymentWithPaypal(Nullable`1 bookingDetailID, String Cancel) in D:\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 317
+
+Date: 10/8/2024 3:52:42 PM
+Message: The remote server returned an error: (400) Bad Request.
+StackTrace:    at PayPal.Api.PayPalResource.ConfigureAndExecute[T](APIContext apiContext, HttpMethod httpMethod, String resource, String payload, String endpoint, Boolean setAuthorizationHeader)
+   at PayPal.Api.Payment.Execute(APIContext apiContext, String paymentId, PaymentExecution paymentExecution)
+   at DAPMDuLich.Areas.User.Controllers.BookingDetailController.ExecutePayment(APIContext apiContext, String payerId, String paymentId) in D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 274
+   at DAPMDuLich.Areas.User.Controllers.BookingDetailController.PaymentWithPaypal(Nullable`1 bookingDetailID, String Cancel) in D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 204
+
+Date: 10/8/2024 3:53:01 PM
+Message: The remote server returned an error: (400) Bad Request.
+StackTrace:    at PayPal.Api.PayPalResource.ConfigureAndExecute[T](APIContext apiContext, HttpMethod httpMethod, String resource, String payload, String endpoint, Boolean setAuthorizationHeader)
+   at PayPal.Api.Payment.Execute(APIContext apiContext, String paymentId, PaymentExecution paymentExecution)
+   at DAPMDuLich.Areas.User.Controllers.BookingDetailController.ExecutePayment(APIContext apiContext, String payerId, String paymentId) in D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 274
+   at DAPMDuLich.Areas.User.Controllers.BookingDetailController.PaymentWithPaypal(Nullable`1 bookingDetailID, String Cancel) in D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 204
+
+Date: 10/8/2024 4:18:37 PM
+Message: The remote server returned an error: (400) Bad Request.
+StackTrace:    at PayPal.Api.PayPalResource.ConfigureAndExecute[T](APIContext apiContext, HttpMethod httpMethod, String resource, String payload, String endpoint, Boolean setAuthorizationHeader)
+   at PayPal.Api.Payment.Create(APIContext apiContext, Payment payment)
+   at DAPMDuLich.Areas.User.Controllers.BookingDetailController.CreatePayment(APIContext apiContext, String redirectUrl) in C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 347
+   at DAPMDuLich.Areas.User.Controllers.BookingDetailController.PaymentWithPaypal(Nullable`1 bookingDetailID, String Cancel) in C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 171
+
+Date: 11/4/2024 9:45:02 PM
+Message: The remote server returned an error: (400) Bad Request.
+StackTrace:    at PayPal.Api.PayPalResource.ConfigureAndExecute[T](APIContext apiContext, HttpMethod httpMethod, String resource, String payload, String endpoint, Boolean setAuthorizationHeader)
+   at PayPal.Api.Payment.Create(APIContext apiContext, Payment payment)
+   at DAPMDuLich.Areas.User.Controllers.BookingDetailController.CreatePayment(APIContext apiContext, String redirectUrl) in C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 347
+   at DAPMDuLich.Areas.User.Controllers.BookingDetailController.PaymentWithPaypal(Nullable`1 bookingDetailID, String Cancel) in C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 171
+
+Date: 11/4/2024 9:45:07 PM
+Message: The remote server returned an error: (400) Bad Request.
+StackTrace:    at PayPal.Api.PayPalResource.ConfigureAndExecute[T](APIContext apiContext, HttpMethod httpMethod, String resource, String payload, String endpoint, Boolean setAuthorizationHeader)
+   at PayPal.Api.Payment.Create(APIContext apiContext, Payment payment)
+   at DAPMDuLich.Areas.User.Controllers.BookingDetailController.CreatePayment(APIContext apiContext, String redirectUrl) in C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 347
+   at DAPMDuLich.Areas.User.Controllers.BookingDetailController.PaymentWithPaypal(Nullable`1 bookingDetailID, String Cancel) in C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\Areas\User\Controllers\BookingDetailController.cs:line 171
+

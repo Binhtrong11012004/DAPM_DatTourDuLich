@@ -1,0 +1,103 @@
+﻿@model IEnumerable<DAPMDuLich.Models.TourDuLich>
+@{
+    ViewBag.Title = "DanhSach";
+    Layout = "~/Areas/Admin/Views/Shared/layoutadmin.cshtml";
+    int i = 0;
+}
+
+<div class="row" style="margin-top:50px">
+    <div class="col-md-12">
+        <h3>DANH SÁCH TOUR</h3>
+    </div>
+    <div class="col-md-12">
+        <p>
+            <a href="~/Admin/Tour/Create">Thêm mới</a>
+        </p>
+        <table class="table table-bordered ">
+            <tr>
+                <th>STT</th>
+                <th>
+                    Tên tour
+                </th>
+                <th>
+                    Địa điểm
+                </th>
+
+                <th>
+                    Ngày đi
+                </th>
+                <th>
+                    Ngày kết thúc
+                </th>
+                <th>
+                    Lịch Trình
+                </th>
+                <th>
+                    Số người tối đa
+                </th>
+                <th>
+                    Loại tour
+                </th>
+                <th>
+                    Phương tiện
+                </th>
+                <th>
+                    Giá tour
+                </th>
+                <th>#</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                i++;
+                <tr>
+                    <td>@i</td>
+                    <td>
+                        @item.TieuDe
+                    </td>
+                    <td>
+                        @item.DiaDiem
+                    </td>
+                    <td>
+                        @item.TripStart
+                    </td>
+                    <td>
+                        @item.TripEnd
+                    </td>
+                    <td>
+                        @item.LichTrinh
+                    </td>
+                    <td>
+                        @item.SoNguoiToiDa
+                    </td>
+                    
+                    @*<td>
+            @item.idTinh
+        </td>*@
+                    <td>
+                        @{
+                            var loaiTour = new DAPMDuLich.Models.mapLoaiTour().ChiTiet(item.idLoaiTour ?? 0);
+                            if (loaiTour != null)
+                            {
+                                <span>@loaiTour.Ten</span>
+                            }
+                        }
+                    </td>
+                    <td>
+                        @item.PhuongTien
+                    </td>
+                    <td>
+                        @string.Format("{0:#,0}", item.GiaTour)
+                    </td>
+                    <td>
+                        <a href="~/Admin/Tour/Update?idTour=@item.ID">Cập nhật</a>
+                        <button type="button" class="btn btn-icon btn-round btn-danger btn-xs" style="margin-left: 10px;" onclick="if (confirm('Có muốn xóa không?')) { location.href='/Admin/Tour/Delete?idTour=@item.ID' }">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </button>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

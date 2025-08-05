@@ -1,0 +1,107 @@
+﻿@model DAPMDuLich.Models.TourDuLich
+
+@{
+    ViewBag.Title = "Chi tiết Tour";
+    Layout = "~/Areas/Contributors/Views/Shared/_Layout.cshtml";
+}
+
+<div class="review-section">
+    <h4 class="review-title">Danh sách đánh giá:</h4>
+    @if (Model.DanhGias.Any())
+    {
+        <ul class="review-list">
+            @foreach (var review in Model.DanhGias)
+            {
+                <li class="review-item">
+                    <div class="review-header">
+                        <strong class="review-author">@review.TaiKhoan.TenHienThi</strong>
+                        <span class="review-rating">@review.DanhGiaSao <i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="review-date">
+                        <em>@(review.ThoiGianDanhGia.HasValue ? review.ThoiGianDanhGia.Value.ToString("dd/MM/yyyy HH:mm:ss") : "Ngày không xác định")</em>
+                    </div>
+                    <div class="review-comment">
+                        <strong>Nhận xét:</strong>
+                        <p>@review.NhanXet</p> <!-- Hiển thị nhận xét của người dùng -->
+                    </div>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p class="no-review-message">Không có đánh giá nào cho tour này.</p>
+    }
+</div>
+
+<style>
+    .review-section {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .review-title {
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .review-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .review-item {
+        background-color: #fff;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .review-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .review-author {
+        font-weight: bold;
+        color: #555;
+    }
+
+    .review-rating {
+        color: #FFD700; /* Gold color for stars */
+        font-weight: bold;
+    }
+
+        .review-rating i {
+            margin-left: 5px;
+        }
+
+    .review-date {
+        font-size: 0.9em;
+        color: #888;
+        margin-top: 5px;
+    }
+
+    .review-comment {
+        margin-top: 10px;
+        font-size: 1em;
+        color: #333;
+    }
+
+        .review-comment p {
+            margin: 5px 0 0;
+            padding: 0;
+        }
+
+    .no-review-message {
+        text-align: center;
+        color: #888;
+        font-size: 1.2em;
+    }
+</style>

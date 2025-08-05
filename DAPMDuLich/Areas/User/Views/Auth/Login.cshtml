@@ -1,0 +1,192 @@
+﻿@model DAPMDuLich.Models.TaiKhoan
+
+@{
+    ViewBag.Title = "Đăng Nhập";
+    Layout = "~/Areas/User/Views/Shared/LayoutDN.cshtml";
+}
+
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+
+<style>
+    /* Body Styles */
+    body {
+        background-image: url('/Areas/User/assets/HinhAnh/dangnhap.jpg');
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Snowflake Canvas */
+    canvas#projector {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    /* Login Container */
+    .login-container {
+        background-color: rgba(255, 255, 255, 0.85);
+        width: 400px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Input Fields */
+        .login-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+    /* Submit Button */
+    .btn-submit {
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff; /* Màu xanh dương */
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+        .btn-submit:hover {
+            background-color: #0056b3; /* Màu xanh đậm khi hover */
+        }
+
+    /* Links for Register and Forgot Password */
+    .login-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+        .login-links .link {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+            .login-links .link:hover {
+                text-decoration: underline;
+            }
+
+    /* Error Message */
+    .text-danger {
+        color: red;
+        font-size: 14px;
+    }
+</style>
+</head>
+<body>
+    <canvas id="projector"></canvas>
+
+    <div class="login-container">
+        <h2>Đăng Nhập</h2>
+        @using (Html.BeginForm("Login", "Auth", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <label for="username">Tên Đăng nhập</label>
+                @Html.TextBoxFor(model => model.TenDangNhap, new { @class = "form-control", @id = "username", @required = "required" })
+                @Html.ValidationMessageFor(model => model.TenDangNhap, "", new { @class = "text-danger" })
+
+                <label for="password">Mật khẩu</label>
+                @Html.PasswordFor(model => model.MatKhau, new { @class = "form-control", @id = "password", @required = "required" })
+                @Html.ValidationMessageFor(model => model.MatKhau, "", new { @class = "text-danger" })
+
+                <button type="submit" class="btn-submit">Đăng nhập</button>
+                <div class="login-links">
+                    <a href="@Url.Action("Register", "Auth", new {area="User"})" class="link">Đăng ký</a>
+                    <a href="#" class="link">Quên mật khẩu?</a>
+                </div>
+            </div>
+        }
+    </div>
+
+    <script>
+        // Snowflake animation script
+        var canvas, ctx, snowflakes = [];
+
+        function setupCanvas() {
+            canvas = document.getElementById("projector");
+            ctx = canvas.getContext("2d");
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            for (var i = 0; i < 200; i++) {
+                snowflakes.push(createSnowflake());
+            }
+
+            animateSnowflakes();
+        }
+
+        function createSnowflake() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                size: Math.random() * 5 + 2,
+                alpha: Math.random() * 0.5 + 0.3,
+                speedY: Math.random() * 1 + 0.5,
+                speedX: Math.random() * 0.5 - 0.25
+            };
+        }
+
+        function updateSnowflakes() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            snowflakes.forEach(function (snowflake) {
+                snowflake.y += snowflake.speedY;
+
+                if (snowflake.y > canvas.height) {
+                    snowflake.y = -snowflake.size;
+                    snowflake.x = Math.random() * canvas.width;
+                }
+
+                snowflake.x += snowflake.speedX;
+
+                if (snowflake.x > canvas.width) snowflake.x = 0;
+                if (snowflake.x < 0) snowflake.x = canvas.width;
+
+                ctx.fillStyle = "#FFFFFF";
+                ctx.globalAlpha = snowflake.alpha;
+                ctx.beginPath();
+                ctx.arc(snowflake.x, snowflake.y, snowflake.size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+        }
+
+        function animateSnowflakes() {
+            updateSnowflakes();
+            requestAnimationFrame(animateSnowflakes);
+        }
+
+        window.onload = setupCanvas;
+    </script>
+</body>

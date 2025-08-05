@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Đăng nhập Admin</title>
+
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('/Areas/User/assets/HinhAnh/dangnhap.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: #333;
+        }
+
+        /* Canvas for snowflakes */
+        #projector {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .login-container {
+            background: rgba(0, 0, 0, 0.6); /* Darker for contrast */
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+            .login-container h1 {
+                font-size: 28px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                color: #00E676;
+            }
+
+            .login-container label {
+                font-size: 15px;
+                color: #b0c4de;
+                margin-bottom: 8px;
+                display: block;
+                text-align: left;
+            }
+
+            .login-container input {
+                width: 80%; /* Điều chỉnh độ rộng xuống 80% */
+                padding: 12px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                font-size: 16px;
+                background-color: rgba(255, 255, 255, 0.15);
+                color: #ffffff;
+                transition: background-color 0.3s, border 0.3s;
+            }
+
+                .login-container input:focus {
+                    background-color: rgba(255, 255, 255, 0.25);
+                    outline: none;
+                    border: 1px solid #00E676;
+                }
+
+            .login-container button {
+                width: 80%; /* Đồng bộ độ rộng của nút đăng nhập */
+                padding: 12px;
+                border-radius: 10px;
+                background: linear-gradient(90deg, #00E676, #00B0FF);
+                color: white;
+                border: none;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background 0.3s, transform 0.2s;
+            }
+
+                .login-container button:hover {
+                    background: linear-gradient(90deg, #00C853, #0091EA);
+                    transform: scale(1.05);
+                }
+
+        .error-message {
+            color: #ff4d4d;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .login-links {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #8BC6FF;
+        }
+
+            .login-links a {
+                color: #8BC6FF;
+                text-decoration: none;
+            }
+
+                .login-links a:hover {
+                    text-decoration: underline;
+                    color: #00E676;
+                }
+    </style>
+</head>
+
+<body>
+    <!-- Snow Effect -->
+    <canvas id="projector"></canvas>
+
+    <div class="login-container">
+        <h1>Đăng nhập Admin</h1>
+        <form method="post">
+            <label for="tenDangNhap">Tên đăng nhập:</label>
+            <input type="text" id="tenDangNhap" name="tenDangNhap" required />
+
+            <label for="matKhau">Mật khẩu:</label>
+            <input type="password" id="matKhau" name="matKhau" required />
+
+            <button type="submit">Đăng nhập</button>
+
+            <div class="login-links">
+                <a href="#">Quên mật khẩu?</a>
+                <br />
+                <a href="@Url.Action("Register", "Auth", new { area = "Admin" })">Đăng ký tài khoản Admin</a>
+            </div>
+        </form>
+        <p class="error-message">@ViewBag.thongbao</p>
+    </div>
+
+    <script>
+        var canvas, ctx, snowflakes = [];
+
+        function setupCanvas() {
+            canvas = document.getElementById("projector");
+            ctx = canvas.getContext("2d");
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            for (var i = 0; i < 200; i++) {
+                snowflakes.push(createSnowflake());
+            }
+
+            animateSnowflakes();
+        }
+
+        function createSnowflake() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                size: Math.random() * 5 + 2,
+                alpha: Math.random() * 0.5 + 0.3,
+                speedY: Math.random() * 1 + 0.5,
+                speedX: Math.random() * 0.5 - 0.25
+            };
+        }
+
+        function updateSnowflakes() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            snowflakes.forEach(function (snowflake) {
+                snowflake.y += snowflake.speedY;
+
+                if (snowflake.y > canvas.height) {
+                    snowflake.y = -snowflake.size;
+                    snowflake.x = Math.random() * canvas.width;
+                }
+
+                snowflake.x += snowflake.speedX;
+
+                if (snowflake.x > canvas.width) snowflake.x = 0;
+                if (snowflake.x < 0) snowflake.x = canvas.width;
+
+                ctx.fillStyle = "#FFFFFF";
+                ctx.globalAlpha = snowflake.alpha;
+                ctx.beginPath();
+                ctx.arc(snowflake.x, snowflake.y, snowflake.size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+        }
+
+        function animateSnowflakes() {
+            updateSnowflakes();
+            requestAnimationFrame(animateSnowflakes);
+        }
+
+        window.onload = setupCanvas;
+    </script>
+</body>
+</html>

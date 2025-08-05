@@ -1,0 +1,236 @@
+﻿@model IEnumerable<DAPMDuLich.Models.DatTour>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Contributors/Views/Shared/_Layout.cshtml";
+    int i = 0;
+}
+
+<div class="container mt-5">
+    <!-- Canvas cho hiệu ứng tuyết -->
+    <canvas id="projector"></canvas>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="font-weight-bold text-primary">DANH SÁCH ĐÃ ĐẶT TOUR</h3>
+        </div>
+
+        <!-- Form tìm kiếm -->
+        <div class="col-md-12 mb-4">
+            <form action="@Url.Action("Search", "Booking")" method="get" class="form-inline">
+                <div class="form-group mr-3">
+                    <label for="searchQuery" class="mr-2">Tìm kiếm:</label>
+                    <input type="text" name="searchQuery" id="searchQuery" class="form-control" placeholder="BookingID, UserID, Tên khách hàng">
+                </div>
+                <div class="form-group mr-3">
+                    <label for="createAt" class="mr-2">Ngày Tạo:</label>
+                    <input type="date" name="createAt" id="createAt" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+            </form>
+        </div>
+
+        <div class="col-md-12">
+            <table class="table table-bordered table-striped text-center">
+                <thead class="thead-light">
+                    <tr>
+                        <th>STT</th>
+                        <th>ID Booking Tour</th>
+                        <th>ID Khách Hàng</th>
+                        <th>Tên khách hàng</th>
+                        <th>Ngày Tạo</th>
+                        <th>Trạng Thái Đặt Tour</th>
+                        <th>#</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        i++;
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.BookingID</td>
+                            <td>@item.UserID</td>
+                            <td>@item.TaiKhoan.TenHienThi</td>
+                            <td>@String.Format("{0:dd/MM/yyyy HH:mm:ss}", item.CreateAt)</td>
+                            <td>
+                                @if (item.Status == null)
+                                {
+                                    <span class="badge badge-secondary">Chưa xác định</span>
+                                }
+                                else if (item.Status == true)
+                                {
+                                    <span class="badge badge-success">Đã xác nhận</span>
+                                }
+                                else
+                                {
+                                    <span class="badge badge-danger">Đã hủy</span>
+                                }
+                            </td>
+                            <td>
+                                @Html.ActionLink("Chi tiết đơn hàng", "Details", "BookingDetail", new { id = item.BookingID }, new { @class = "btn btn-link" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        background-color: #f9f9fc; /* Màu nền nhạt để tăng độ tương phản */
+        padding: 20px;
+        border-radius: 8px; /* Bo tròn nhẹ cho phần chứa bảng */
+        position: relative; /* Để canvas không che mất nội dung */
+        z-index: 1; /* Đảm bảo các phần tử trong container sẽ hiển thị trên canvas */
+        max-width:2000px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        color: #3a5fcd; /* Màu xanh lam đậm cho tiêu đề */
+        font-weight: 600;
+    }
+
+    .form-inline .form-group label {
+        font-weight: 500;
+        color: #4b4b4b;
+    }
+
+    .form-inline .form-control {
+        border-radius: 6px;
+        border: 1px solid #ced4da;
+    }
+
+    .btn-primary {
+        background-color: #3a5fcd;
+        border-color: #3a5fcd;
+        border-radius: 6px;
+    }
+
+    .table {
+        background-color: #fff; /* Màu nền trắng cho bảng */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+        border-radius: 8px;
+        overflow: hidden; /* Giữ các góc của bảng gọn gàng */
+    }
+
+        .table th {
+            background-color: #e9ecef; /* Màu nền cho tiêu đề bảng */
+            color: #495057;
+            font-weight: 600;
+        }
+
+        .table td {
+            color: #333;
+            padding: 12px 15px;
+        }
+
+    .badge-secondary {
+        background-color: #6c757d;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 12px;
+    }
+
+    .badge-success {
+        background-color: #28a745;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 12px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); /* Đổ bóng nhẹ */
+    }
+
+    .badge-danger {
+        background-color: #dc3545;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 12px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-link {
+        color: #3a5fcd; /* Màu xanh lam cho liên kết */
+        font-weight: 500;
+    }
+
+    /* Canvas cho tuyết rơi */
+    #projector {
+        position: fixed;
+        top: 0;
+        left: 0; /* Đảm bảo tuyết sẽ bắt đầu từ cạnh trái */
+        width: 100%; /* Màn hình rộng đầy đủ */
+        height: 100%; /* Màn hình cao đầy đủ */
+        z-index: -1; /* Đặt canvas phía sau các phần tử khác */
+        pointer-events: none; /* Không tương tác với canvas */
+    }
+</style>
+
+<script>
+    var canvas, ctx, snowflakes = [];
+
+    function setupCanvas() {
+        canvas = document.getElementById("projector");
+        ctx = canvas.getContext("2d");
+
+        // Thiết lập chiều rộng và chiều cao cho canvas
+        canvas.width = window.innerWidth; // Chiều rộng toàn bộ màn hình
+        canvas.height = window.innerHeight; // Chiều cao toàn bộ màn hình
+
+        // Tạo các bông tuyết
+        for (var i = 0; i < 30; i++) {
+            snowflakes.push(createSnowflake());
+        }
+
+        animateSnowflakes();
+    }
+
+    // Hàm tạo một bông tuyết
+    function createSnowflake() {
+        return {
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 15 + 10,
+            alpha: Math.random() * 0.5 + 0.3,
+            speedY: Math.random() * 1 + 0.5,
+            speedX: Math.random() * 0.5 - 0.25,
+            icon: "❄️"
+        };
+    }
+
+    // Cập nhật vị trí các bông tuyết và vẽ chúng
+    function updateSnowflakes() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        snowflakes.forEach(function (snowflake) {
+            snowflake.y += snowflake.speedY;
+
+            // Reset vị trí bông tuyết khi ra ngoài màn hình
+            if (snowflake.y > canvas.height) {
+                snowflake.y = -snowflake.size;
+                snowflake.x = Math.random() * canvas.width;
+            }
+
+            snowflake.x += snowflake.speedX;
+
+            if (snowflake.x > canvas.width) snowflake.x = 0;
+            if (snowflake.x < 0) snowflake.x = canvas.width;
+
+            // Vẽ bông tuyết
+            ctx.fillStyle = "#FFFFFF";
+            ctx.font = snowflake.size + "px Arial";
+            ctx.globalAlpha = snowflake.alpha;
+            ctx.fillText(snowflake.icon, snowflake.x, snowflake.y);
+        });
+    }
+
+    // Animation cho tuyết
+    function animateSnowflakes() {
+        updateSnowflakes();
+        requestAnimationFrame(animateSnowflakes);
+    }
+
+    // Khởi tạo tuyết khi tải xong trang
+    window.onload = setupCanvas;
+</script>

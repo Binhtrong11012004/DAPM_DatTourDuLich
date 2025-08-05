@@ -1,0 +1,127 @@
+﻿@model DAPMDuLich.Areas.Admin.Data.ViewModel.AdminStatisticsViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/layoutadmin.cshtml";
+}
+<link href="~/Areas/Admin/assets/css/adminStatistics.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <h2 class="text-center text-primary mb-5" style="font-family: 'Roboto', sans-serif;color:black;font-size:50px;font-weight:bold">Tổng Quan Thống Kê</h2>
+
+    <div class="row">
+        <!-- Thống kê bài viết -->
+        <div class="col-lg-6 col-md-12 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h4 class="mb-0" style="font-weight: bold;">Tổng Quan Về Bài Viết</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Tổng số bài viết:
+                            <strong><span class="stat-value">@Model.TotalPosts</span></strong>
+                        </li>
+                        <li class="list-group-item">
+                            Bài viết đã duyệt:
+                            <strong><span class="stat-value">@Model.TotalApprovedPosts</span></strong>
+                        </li>
+                        <li class="list-group-item">
+                            Bài viết đang chờ duyệt:
+                            <strong><span class="stat-value">@Model.TotalPendingPosts</span></strong>
+                        </li>
+                        <li class="list-group-item">
+                            Bài viết đã từ chối:
+                            <strong><span class="stat-value">@Model.TotalRejectedPosts</span></strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thống kê đặt tour -->
+        <div class="col-lg-6 col-md-12 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h4 class="mb-0" style="font-weight: bold;">Thống Kê Đặt Tour</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Tổng số lượng tour được đặt:
+                            <strong><span class="stat-value">@Model.TotalBookings</span></strong>
+                        </li>
+                        <li class="list-group-item">
+                            Tổng số tour đã thanh toán:
+                            <strong><span class="stat-value">@Model.TotalPaidBookings</span></strong>
+                        </li>
+                        <li class="list-group-item">
+                            Tổng số tour chưa thanh toán:
+                            <strong><span class="stat-value">@Model.TotalUnpaidBookings</span></strong>
+                        </li>
+                        <li class="list-group-item">
+                            Tổng số hoa hồng admin nhận được:
+                            <strong><span class="commission-value">@Model.TotalAdminCommission.ToString("C2")</span></strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mt-5">
+        <div class="card-header bg-primary text-white text-center">
+            <h4 class="mb-0" style="font-weight: bold;">Hiệu Suất Của Các Contributors</h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover table-bordered">
+                <thead class="bg-light">
+                    <tr>
+                        <th class="text-center">Tên Contributor</th>
+                        <th class="text-center">Tổng Số Bài Viết</th>
+                        <th class="text-center">Bài Viết Đã Duyệt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var contributor in Model.TopContributors)
+                    {
+                        <tr>
+                            <td class="text-center">@contributor.ContributorName</td>
+                            <td class="text-center">@contributor.PostCount</td>
+                            <td class="text-center">@contributor.ApprovedPostCount</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    h2, h4 {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .list-group-item {
+        font-size: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .table thead th,
+    .table tbody td {
+        font-size: 16px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .table tbody tr {
+        height: 50px;
+    }
+
+    /* Khoảng cách giữa chữ và giá trị của các mục thống kê */
+    .stat-value, .commission-value {
+        margin-left: 10px; /* Thêm khoảng cách giữa văn bản và giá trị */
+    }
+</style>

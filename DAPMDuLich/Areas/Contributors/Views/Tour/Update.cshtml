@@ -1,0 +1,325 @@
+﻿@model DAPMDuLich.Models.TourDuLich
+
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Areas/Contributors/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Cập nhật bài viết tour</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.ID)
+
+    <div class="form-group">
+        @Html.Label("Tiêu Đề", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.TieuDe, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập tiêu đề tour, ví dụ: Tour du lịch Hạ Long 2 ngày 1 đêm" } })
+            @Html.ValidationMessageFor(model => model.TieuDe, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Hình Ảnh", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.HinhAnh, new { htmlAttributes = new { @class = "form-control", placeholder = "URL ảnh đại diện cho tour, ví dụ: https://example.com/image.jpg" } })
+            @Html.ValidationMessageFor(model => model.HinhAnh, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Ngày Đi", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.TripStart, "{0:yyyy-MM-dd}", new { @class = "form-control", @type = "date" })
+            @Html.ValidationMessageFor(model => model.TripStart, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Ngày Về", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.TripEnd, "{0:yyyy-MM-dd}", new { @class = "form-control", @type = "date" })
+            @Html.ValidationMessageFor(model => model.TripEnd, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Lịch Trình", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(model => model.LichTrinh, new { @class = "form-control", rows = 5, placeholder = "Nhập lịch trình chi tiết. Ví dụ:\nNgày 1:\n08:00: Xuất phát từ Hà Nội.\n12:00: Đến Hạ Long, nhận phòng tại khách sạn.\n13:00: Tham quan vịnh Hạ Long bằng tàu.\n18:00: Dùng bữa tối và tham gia chương trình giao lưu văn hóa.\n\nNgày 2:\n07:00: Điểm tâm sáng tại khách sạn.\n09:00: Tham quan động Thiên Cung.\n11:00: Trả phòng và trở về Hà Nội." })
+            @Html.ValidationMessageFor(model => model.LichTrinh, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Địa Điểm", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DiaDiem, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập địa điểm, ví dụ: Vịnh Hạ Long, Quảng Ninh" } })
+            @Html.ValidationMessageFor(model => model.DiaDiem, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Số Người Tối Đa", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.SoNguoiToiDa, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập số người tối đa, ví dụ: 20" } })
+            @Html.ValidationMessageFor(model => model.SoNguoiToiDa, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Phương Tiện", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.PhuongTien, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập phương tiện di chuyển, ví dụ: Xe khách, tàu thuyền" } })
+            @Html.ValidationMessageFor(model => model.PhuongTien, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Giá Tour", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.GiaTour, new { htmlAttributes = new { @class = "form-control", placeholder = "Nhập giá tour, ví dụ: 3000000" } })
+            @Html.ValidationMessageFor(model => model.GiaTour, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Mô Tả Tour", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(model => model.BaiViet, new { @class = "form-control", rows = 5, placeholder = "Nhập nội dung bài viết mô tả chi tiết tour" })
+            @Html.ValidationMessageFor(model => model.BaiViet, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @*<div class="form-group">
+        @Html.Label("Tỉnh", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.idTinh,
+                new SelectList(new DAPMDuLich.Models.mapTinhThanh().DanhSach(), "ID_Tinh", "Ten"),
+                new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.idTinh, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+
+    <div class="form-group">
+        @Html.Label("Loại Tour", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.idLoaiTour,
+                new SelectList(new DAPMDuLich.Models.mapLoaiTour().DanhSach(), "ID", "Ten"),
+                new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.idLoaiTour, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Mức Giá", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.idMucGia,
+                new SelectList(new DAPMDuLich.Models.mapMucGia().DanhSach(), "ID", "Gia"),
+                new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.idMucGia, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <!-- Nút Save -->
+            <input type="submit" value="Lưu Thay Đổi" class="btn btn-success btn-lg" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    <!-- Nút quay lại danh sách tour -->
+    <a href="@Url.Action("List", "Tour")" class="btn btn-primary btn-lg">
+        Quay lại danh sách
+    </a>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+
+        // Hàm giúp xóa thông báo lỗi khi có thông báo lỗi cũ
+        function clearErrorMessage(element) {
+            const errorMessage = element.closest(".form-group").querySelector(".text-danger");
+            if (errorMessage) {
+                errorMessage.remove(); // Xóa thông báo lỗi cũ
+            }
+        }
+
+        // Hàm giúp thêm thông báo lỗi
+        function addErrorMessage(element, message) {
+            clearErrorMessage(element); // Xóa thông báo lỗi trước khi thêm
+            const errorMessage = document.createElement("span");
+            errorMessage.className = "text-danger";
+            errorMessage.textContent = message;
+            element.closest(".form-group").appendChild(errorMessage);
+        }
+
+        // Xác thực Tiêu Đề
+        const titleField = document.querySelector("#TieuDe");
+        titleField.addEventListener("input", function () {
+            clearErrorMessage(titleField); // Xóa thông báo lỗi khi người dùng nhập
+            if (!titleField.value || titleField.value.length < 10) {
+                addErrorMessage(titleField, "Tiêu đề không được để trống và phải có ít nhất 10 ký tự.");
+            }
+        });
+
+        // Xác thực Hình Ảnh
+        const imageField = document.querySelector("#HinhAnh");
+        imageField.addEventListener("input", function () {
+            clearErrorMessage(imageField); // Xóa thông báo lỗi khi người dùng nhập
+            if (!imageField.value) {
+                addErrorMessage(imageField, "Phải có ít nhất một hình ảnh.");
+            }
+        });
+
+        // Xác thực Phương Tiện
+        const transportField = document.querySelector("#PhuongTien");
+        transportField.addEventListener("input", function () {
+            clearErrorMessage(transportField); // Xóa thông báo lỗi khi người dùng nhập
+            const regex = /^[a-zA-Z\s]+$/;
+            if (!regex.test(transportField.value)) {
+                addErrorMessage(transportField, "Phương tiện chỉ được phép chứa các ký tự chữ cái và khoảng trắng.");
+            }
+        });
+
+        // Xác thực Ngày Khởi Hành và Ngày Kết Thúc
+        const tripStart = document.querySelector("#TripStart");
+        const tripEnd = document.querySelector("#TripEnd");
+
+        tripStart.addEventListener("change", function () {
+            validateDates();
+        });
+
+        tripEnd.addEventListener("change", function () {
+            validateDates();
+        });
+
+        // Hàm xác thực ngày
+        function validateDates() {
+            clearErrorMessage(tripEnd); // Xóa thông báo lỗi khi người dùng nhập
+            const startDate = new Date(tripStart.value);
+            const endDate = new Date(tripEnd.value);
+
+            if (endDate && startDate && endDate <= startDate) {
+                addErrorMessage(tripEnd, "Ngày về phải sau ngày đi.");
+            }
+        }
+
+        // Xác thực Số Người Tối Đa
+        const maxPeopleField = document.querySelector("#SoNguoiToiDa");
+        maxPeopleField.addEventListener("input", function () {
+            clearErrorMessage(maxPeopleField); // Xóa thông báo lỗi khi người dùng nhập
+            if (!maxPeopleField.value || maxPeopleField.value <= 0) {
+                addErrorMessage(maxPeopleField, "Số người tối đa phải là số nguyên dương.");
+            }
+        });
+
+        // Xác thực Giá Tour
+        const priceField = document.querySelector("#GiaTour");
+        priceField.addEventListener("input", function () {
+            clearErrorMessage(priceField); // Xóa thông báo lỗi khi người dùng nhập
+            if (!priceField.value || priceField.value <= 0) {
+                addErrorMessage(priceField, "Giá tour phải là số dương.");
+            }
+        });
+
+        // Xác thực Mô Tả Tour
+        const descriptionField = document.querySelector("#BaiViet");
+        descriptionField.addEventListener("input", function () {
+            clearErrorMessage(descriptionField); // Xóa thông báo lỗi khi người dùng nhập
+            if (!descriptionField.value) {
+                addErrorMessage(descriptionField, "Mô tả tour không được để trống.");
+            }
+        });
+
+        // Xác thực Thời gian khởi hành, Lịch trình, Địa điểm
+        const startDateField = document.querySelector("#TripStart");
+        const endDateField = document.querySelector("#TripEnd");
+        const scheduleField = document.querySelector("#LichTrinh");
+        const locationField = document.querySelector("#DiaDiem");
+
+        // Kiểm tra khi người dùng thay đổi thời gian khởi hành
+        startDateField.addEventListener("change", function () {
+            clearErrorMessage(startDateField); // Xóa thông báo lỗi
+            if (!startDateField.value) {
+                addErrorMessage(startDateField, "Thời gian khởi hành là bắt buộc.");
+            }
+        });
+
+        // Kiểm tra khi người dùng thay đổi lịch trình
+        scheduleField.addEventListener("input", function () {
+            clearErrorMessage(scheduleField); // Xóa thông báo lỗi
+            if (!scheduleField.value) {
+                addErrorMessage(scheduleField, "Lịch trình không được để trống.");
+            }
+        });
+
+        // Kiểm tra khi người dùng thay đổi địa điểm
+        locationField.addEventListener("input", function () {
+            clearErrorMessage(locationField); // Xóa thông báo lỗi
+            if (!locationField.value) {
+                addErrorMessage(locationField, "Địa điểm không được để trống.");
+            }
+        });
+
+        // Xử lý khi người dùng submit form
+        form.addEventListener("submit", function (event) {
+            let isValid = true;
+
+            // Kiểm tra lại từng trường khi submit
+            if (!titleField.value || titleField.value.length < 10) {
+                addErrorMessage(titleField, "Tiêu đề không được để trống và phải có ít nhất 10 ký tự.");
+                isValid = false;
+            }
+            if (!imageField.value) {
+                addErrorMessage(imageField, "Phải có ít nhất một hình ảnh.");
+                isValid = false;
+            }
+            if (!/^[a-zA-Z\s]+$/.test(transportField.value)) {
+                addErrorMessage(transportField, "Phương tiện chỉ được phép chứa các ký tự chữ cái và khoảng trắng.");
+                isValid = false;
+            }
+            if (new Date(endDateField.value) <= new Date(startDateField.value)) {
+                addErrorMessage(endDateField, "Ngày về phải sau ngày đi.");
+                isValid = false;
+            }
+            if (!maxPeopleField.value || maxPeopleField.value <= 0) {
+                addErrorMessage(maxPeopleField, "Số người tối đa phải là số nguyên dương.");
+                isValid = false;
+            }
+            if (!priceField.value || priceField.value <= 0) {
+                addErrorMessage(priceField, "Giá tour phải là số dương.");
+                isValid = false;
+            }
+            if (!descriptionField.value) {
+                addErrorMessage(descriptionField, "Mô tả tour không được để trống.");
+                isValid = false;
+            }
+            if (!startDateField.value) {
+                addErrorMessage(startDateField, "Thời gian khởi hành là bắt buộc.");
+                isValid = false;d
+            }
+            if (!scheduleField.value) {
+                addErrorMessage(scheduleField, "Lịch trình không được để trống.");
+                isValid = false;
+            }
+            if (!locationField.value) {
+                addErrorMessage(locationField, "Địa điểm không được để trống.");
+                isValid = false;
+            }
+
+            // Nếu không hợp lệ, ngừng gửi form
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    });
+</script>

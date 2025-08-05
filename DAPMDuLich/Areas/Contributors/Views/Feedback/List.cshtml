@@ -1,0 +1,58 @@
+﻿@model IEnumerable<DAPMDuLich.Models.TourDuLich>
+
+@{
+    ViewBag.Title = "Danh sách các tour của bạn";
+    Layout = "~/Areas/Contributors/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-center mb-4" style="font-size: 1.5rem; font-weight: bold;">Danh sách các tour của bạn</h3>
+
+<div class="tour-list">
+    @foreach (var tour in Model)
+    {
+        <div class="tour-item card mb-4" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <div class="card-body" style="display: flex; justify-content: space-between; align-items: center;">
+                <!-- Hiển thị tên tour bên trái -->
+                <h4 class="card-title" style="font-size: 1.1rem; font-weight: bold; color: #333;">
+                    @tour.TieuDe
+                </h4>
+
+                <!-- Liên kết xem tất cả đánh giá bên phải -->
+                <a href="@Url.Action("Details", "Feedback", new { id = tour.ID })" class="btn btn-primary" style="font-size: 1rem; padding: 0.5rem 1.5rem;">
+                    Xem tất cả đánh giá
+                </a>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .tour-list {
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: 900px; /* Giới hạn độ rộng để tạo không gian */
+    }
+
+    .tour-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .tour-item:hover {
+            transform: translateY(-5px); /* Thêm hiệu ứng khi hover */
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .tour-item .card-body {
+            padding: 15px;
+        }
+
+    .card-title {
+        font-size: 1.1rem; /* Kích thước font chữ giảm để phù hợp */
+        color: #333;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+    }
+</style>

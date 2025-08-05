@@ -1,0 +1,24 @@
+﻿@model DAPMDuLich.Models.LoaiTour
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/layoutadmin.cshtml";
+}
+
+<h2>Chỉnh Sửa Loại Tour</h2>
+
+@using (Html.BeginForm("Edit", "TourType", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.ID)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Ten, "Tên Loại Tour")
+        @Html.TextBoxFor(model => model.Ten, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Lưu Thay Đổi" class="btn btn-primary" />
+        <a href="@Url.Action("List")" class="btn btn-default">Hủy</a>
+    </div>
+}
+

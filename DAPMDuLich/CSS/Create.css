@@ -1,0 +1,68 @@
+﻿body {
+    body
+
+{
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.main-content, .sidebar {
+    padding: 20px;
+}
+
+.main-content {
+    flex: 70%;
+    background-color: #fff;
+    margin-right: 20px;
+}
+
+.sidebar {
+    flex: 30%;
+    background-color: #f7f7f7;
+    border-left: 1px solid #ddd;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-group input, .form-group button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+.btn {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+}
+
+.tour-details img {
+    width: 100%;
+    height: auto;
+}
+
+}

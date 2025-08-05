@@ -1,0 +1,396 @@
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\DAPMDuLich.dll.config
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\DAPMDuLich.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\DAPMDuLich.pdb
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\csc.exe
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\csc.exe.config
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\csc.rsp
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\csi.exe
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\csi.exe.config
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\csi.rsp
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Console.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.Compression.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Net.Http.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.ValueTuple.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\vbc.exe
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\vbc.exe.config
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\vbc.rsp
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\System.Web.Helpers.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\System.Web.Mvc.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\System.Web.Razor.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Razor.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\System.Web.Razor.xml
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.xml
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Razor.xml
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\System.Web.Helpers.xml
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\System.Web.Mvc.xml
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.csproj.Up2Date
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.pdb
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\EntityFramework.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\EntityFramework.xml
+C:\Users\Admin\source\repos\DAPMDuLich\DAPMDuLich\bin\EntityFramework.SqlServer.xml
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\DAPMDuLich.dll.config
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\DAPMDuLich.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\DAPMDuLich.pdb
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\csc.exe
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\csc.exe.config
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\csc.rsp
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\csi.exe
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\csi.exe.config
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\csi.rsp
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.Managed.Core.targets
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.AppContext.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Collections.Immutable.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Console.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Globalization.Calendars.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.Compression.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.FileSystem.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Net.Http.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Net.Sockets.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Reflection.Metadata.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.ValueTuple.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.XmlDocument.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.XPath.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\vbc.exe
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\vbc.exe.config
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\vbc.rsp
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\VBCSCompiler.exe
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\VBCSCompiler.exe.config
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\EntityFramework.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\EntityFramework.SqlServer.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\Microsoft.Web.Infrastructure.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Helpers.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Mvc.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Razor.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Deployment.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Razor.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\EntityFramework.xml
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\EntityFramework.SqlServer.xml
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Razor.xml
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.xml
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Deployment.xml
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Razor.xml
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Helpers.xml
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Mvc.xml
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.csproj.AssemblyReference.cache
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.csproj.CoreCompileInputs.cache
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.csproj.Up2Date
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.pdb
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\Newtonsoft.Json.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\PayPal.dll
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\Newtonsoft.Json.xml
+D:\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\PayPal.xml
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\DAPMDuLich.dll.config
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\DAPMDuLich.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\DAPMDuLich.pdb
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\csc.exe
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\csc.exe.config
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\csc.rsp
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\csi.exe
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\csi.exe.config
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\csi.rsp
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Console.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.Compression.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Net.Http.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.ValueTuple.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\vbc.exe
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\vbc.exe.config
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\vbc.rsp
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\EntityFramework.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\Newtonsoft.Json.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\PayPal.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Helpers.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Mvc.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Razor.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Razor.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\EntityFramework.xml
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\Newtonsoft.Json.xml
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\PayPal.xml
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Razor.xml
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.xml
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Razor.xml
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Helpers.xml
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\System.Web.Mvc.xml
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.csproj.Up2Date
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.dll
+C:\Users\Admin\source\repos\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.pdb
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\DAPMDuLich.dll.config
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\DAPMDuLich.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\DAPMDuLich.pdb
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\csc.exe
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\csc.exe.config
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\csc.rsp
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\csi.exe
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\csi.exe.config
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\csi.rsp
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.AppContext.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Collections.Immutable.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Console.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Globalization.Calendars.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.IO.Compression.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.IO.FileSystem.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Net.Http.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Net.Sockets.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Reflection.Metadata.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.ValueTuple.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Xml.XPath.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\vbc.exe
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\vbc.exe.config
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\vbc.rsp
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\VBCSCompiler.exe
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\roslyn\VBCSCompiler.exe.config
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\EntityFramework.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\EntityFramework.SqlServer.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\Microsoft.Web.Infrastructure.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\Newtonsoft.Json.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\PayPal.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\System.Web.Helpers.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\System.Web.Mvc.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\System.Web.Razor.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\System.Web.Webpages.Deployment.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\System.Web.Webpages.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\System.Web.Webpages.Razor.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\EntityFramework.xml
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\EntityFramework.SqlServer.xml
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\Newtonsoft.Json.xml
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\PayPal.xml
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\System.Web.Razor.xml
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\System.Web.Webpages.xml
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\System.Web.Webpages.Deployment.xml
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\System.Web.Webpages.Razor.xml
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\System.Web.Helpers.xml
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\System.Web.Mvc.xml
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\obj\Debug\DAPMDuLich.csproj.AssemblyReference.cache
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\obj\Debug\DAPMDuLich.csproj.CoreCompileInputs.cache
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\obj\Debug\DAPMDuLich.csproj.Up2Date
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\obj\Debug\DAPMDuLich.dll
+E:\Đồ án phần mềm\DAPMDuLich(1)\DAPMDuLich(1)\DAPMDuLich\obj\Debug\DAPMDuLich.pdb
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\DAPMDuLich.dll.config
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\DAPMDuLich.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\DAPMDuLich.pdb
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\csc.exe
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\csc.exe.config
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\csc.rsp
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\csi.exe
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\csi.exe.config
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\csi.rsp
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.AppContext.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Collections.Immutable.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Console.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Globalization.Calendars.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.Compression.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.FileSystem.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Net.Http.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Net.Sockets.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Reflection.Metadata.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.ValueTuple.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.XPath.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\vbc.exe
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\vbc.exe.config
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\vbc.rsp
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\VBCSCompiler.exe
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\roslyn\VBCSCompiler.exe.config
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\EntityFramework.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\EntityFramework.SqlServer.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\Microsoft.Web.Infrastructure.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\Newtonsoft.Json.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\PayPal.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\System.Web.Helpers.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\System.Web.Mvc.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\System.Web.Razor.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Deployment.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Razor.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\EntityFramework.xml
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\EntityFramework.SqlServer.xml
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\Newtonsoft.Json.xml
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\PayPal.xml
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\System.Web.Razor.xml
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.xml
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Deployment.xml
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\System.Web.Webpages.Razor.xml
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\System.Web.Helpers.xml
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\System.Web.Mvc.xml
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.csproj.AssemblyReference.cache
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.csproj.CoreCompileInputs.cache
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.csproj.Up2Date
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.dll
+E:\Đồ án phần mềm\DAPMDuLich\DAPMDuLich\obj\Debug\DAPMDuLich.pdb

@@ -1,0 +1,112 @@
+﻿@model DAPMDuLich.Models.MucGia
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/layoutadmin.cshtml";
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+
+    .page-header {
+        color: #2c3e50;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+        .page-header h2 {
+            font-family: 'Roboto', sans-serif !important;
+        }
+    .page-subheader {
+        color: #7f8c8d;
+        font-weight: 400;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .form-container {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .form-group label {
+        color: #2c3e50;
+        font-weight: 500;
+    }
+
+    .form-control {
+        border-radius: 6px;
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        background-color: #3498db;
+        border-color: #3498db;
+        border-radius: 6px;
+        padding: 12px 25px;
+        font-size: 16px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+        margin-right: 10px;
+    }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+
+    .btn-secondary {
+        background-color: #bdc3c7;
+        border-color: #bdc3c7;
+        border-radius: 6px;
+        padding: 12px 25px;
+        font-size: 16px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-secondary:hover {
+            background-color: #95a5a6;
+        }
+
+    .info-text {
+        text-align: center;
+        color: #95a5a6;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+</style>
+
+<div class="page-header">
+    <h2>Thêm Mới Mức Giá</h2>
+</div>
+<div class="page-subheader">Điền thông tin Mức giá để thêm mới</div>
+
+<div class="form-container">
+    @using (Html.BeginForm("Create", "Price", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Gia, "Mức giá")
+            @Html.TextBoxFor(model => model.Gia, new { @class = "form-control", placeholder = "Nhập mức giá" })
+        </div>
+
+        <div class="form-group text-center">
+            <input type="submit" value="Thêm Mới" class="btn btn-primary" />
+            <a href="@Url.Action("List", "Price")" class="btn btn-secondary">Quay Về</a>
+        </div>
+    }
+    <div class="info-text">
+        Bạn có thể xem danh sách các mức giá đã có sau khi thêm mới thành công.
+    </div>
+</div>
+

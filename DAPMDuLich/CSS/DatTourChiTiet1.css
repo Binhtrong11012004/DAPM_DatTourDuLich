@@ -1,0 +1,78 @@
+﻿/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tour-card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 80%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+    .tour-card img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .tour-card .details {
+        padding: 20px;
+    }
+
+.details h2 {
+    font-size: 1.5em;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.details p {
+    margin: 0 0 10px;
+    font-size: 1em;
+}
+
+.details strong {
+    display: inline-block;
+    width: 120px;
+}
+
+button, .book-now {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button {
+    background-color: #ffc107;
+}
+
+.book-now {
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+    button:hover, .book-now:hover {
+        opacity: 0.8;
+    }

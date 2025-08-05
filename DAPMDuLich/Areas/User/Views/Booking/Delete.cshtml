@@ -1,0 +1,139 @@
+﻿@model DAPMDuLich.Models.DatTour
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/CSS/animate.css" />
+<link rel="stylesheet" href="~/CSS/bootstrap.css" />
+<link rel="stylesheet" href="~/CSS/icomoon.css" />
+<link rel="stylesheet" href="~/CSS/owl.carousel.min.css" />
+<link rel="stylesheet" href="~/CSS/owl.theme.default.min.css" />
+<link rel="stylesheet" href="~/CSS/style.css" />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="gtco-section bg-light py-5" style="margin-top: 100px;">
+        <div class="gtco-container">
+            <div class="row">
+                <div class="col-md-6 animate-box">
+                    <div class="card p-4 shadow-sm">
+                        <h3 class="text-primary mb-4 custom-heading">Thông tin tour</h3>
+                        <div class="row form-group mb-3">
+                            <div class="col-md-12">
+                                <strong class="custom-label">Tên tour: </strong>
+                                @Html.DisplayFor(model => model.TourDuLich.TieuDe)
+                            </div>
+                        </div>
+                        <div class="row form-group mb-3">
+                            <div class="col-md-12">
+                                <strong class="custom-label">Ngày đi: </strong>
+                                @Html.DisplayFor(model => model.TourDuLich.TripStart)
+                            </div>
+                        </div>
+                        <div class="row form-group mb-3">
+                            <div class="col-md-12">
+                                <strong class="custom-label">Ngày về: </strong>
+                                @Html.DisplayFor(model => model.TourDuLich.TripEnd)
+                            </div>
+                        </div>
+                        <div class="row form-group mb-3">
+                            <div class="col-md-12">
+                                <strong class="custom-label">Giá tour: </strong>
+                                @Html.DisplayFor(model => model.TourDuLich.GiaTour) VND
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 animate-box">
+                    <div class="card p-4 shadow-sm">
+                        <h3 class="text-primary mb-4 custom-heading">Thông tin của bạn</h3>
+                        <div class="row form-group mb-3">
+                            <div class="col-md-12">
+                                <strong class="custom-label">Your name: </strong>
+                                @Html.DisplayFor(model => model.TaiKhoan.TenHienThi)
+                            </div>
+                        </div>
+                        <div class="row form-group mb-3">
+                            <div class="col-md-12">
+                                <strong class="custom-label">Email: </strong>
+                                @Html.DisplayFor(model => model.TaiKhoan.Email)
+                            </div>
+                        </div>
+                        <div class="row form-group mb-3">
+                            <div class="col-md-12">
+                                <strong class="custom-label">Trạng thái: </strong>
+                                @Html.DisplayFor(model => model.Status)
+                            </div>
+                        </div>
+                        <div class="row form-group mb-3">
+                            <div class="col-md-12">
+                                <strong class="custom-label">Thanh toán: </strong>
+                                @Html.DisplayFor(model => model.ThanhToan)
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 100px;">
+                            <button type="submit" class="btn btn-danger w-100 btn-lg">Hủy tour</button>
+                            <a href="@Url.Action("History")" class="btn btn-secondary w-100 mt-2 btn-lg">Quay lại</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Tùy chỉnh chữ và kiểu dáng */
+        .custom-heading {
+            font-size: 28px; /* Giảm kích thước chữ của tiêu đề */
+            font-weight: bold;
+            color: #0056b3; /* Màu xanh đậm */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ cho chữ */
+        }
+
+        .custom-label {
+            font-size: 16px; /* Giảm kích thước chữ của nhãn */
+            font-weight: 600;
+            color: #333; /* Màu chữ đen đậm */
+            letter-spacing: 0.5px;
+        }
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng */
+        }
+
+            .card p {
+                font-size: 14px; /* Giảm kích thước chữ của phần nội dung */
+            }
+
+        .btn-lg {
+            font-size: 16px; /* Giảm kích thước chữ trên nút */
+            padding: 12px 20px; /* Cải thiện khoảng cách xung quanh chữ */
+            border-radius: 5px;
+        }
+
+        .bg-light {
+            background-color: #f8f9fa; /* Màu nền sáng */
+        }
+
+        .w-100 {
+            width: 100%; /* Đảm bảo các phần tử chiếm 100% chiều rộng */
+        }
+
+        .mt-2 {
+            margin-top: 10px; /* Thêm khoảng cách giữa các nút */
+        }
+
+        .mb-3 {
+            margin-bottom: 16px; /* Khoảng cách dưới mỗi nhóm form */
+        }
+    </style>
+}
+
+

@@ -1,0 +1,48 @@
+﻿@model DAPMDuLich.Models.Contributor
+
+@{
+    ViewBag.Title = "ViewProfile";
+    Layout = "~/Areas/Contributors/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2>Thông tin cá nhân</h2>
+    <table class="table">
+        <tr>
+            <th>Tên Tài Khoản</th>
+            <td>@Model.ContributorName</td>
+        </tr>
+        <tr>
+            <th>Mật khẩu</th>
+            <td>
+                <input type="password" value="@Model.ContributorPassword" readonly class="form-control" style="width: auto; display: inline-block;" />
+                <a href="#" onclick="this.previousElementSibling.type=this.previousElementSibling.type==='password'?'text':'password'; return false;" class="btn btn-light">
+                    Xem mật khẩu
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <th>Tên công ty</th>
+            <td>@Model.ContributorNickName</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>@Model.ContributorEmail</td>
+        </tr>
+        <tr>
+            <th>Điện thoại</th>
+            <td>@Model.ContributorPhone</td>
+        </tr>
+        <tr>
+            <th>Địa chỉ</th>
+            <td>@Model.ContributorAddress</td>
+        </tr>
+        <tr>
+            <th>Tiền</th>
+            <td>@Convert.ToDecimal(Model.Tien).ToString("0.##") USD</td>
+        </tr>
+
+    </table>
+
+    <a href="@Url.Action("Edit", "InfoContributor")" class="btn btn-primary">Đổi mật khẩu</a>
+</div>

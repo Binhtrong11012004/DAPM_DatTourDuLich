@@ -1,0 +1,189 @@
+﻿@model DAPMDuLich.Models.TourDuLich
+
+@{
+    ViewBag.Title = "Chi Tiết Tour";
+    Layout = "~/Areas/Admin/Views/Shared/layoutadmin.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+</head>
+<style>
+    /* Áp dụng font Roboto cho toàn bộ body */
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* Nếu bạn muốn áp dụng font cho các thành phần khác */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    p, dl, dd, dt, li {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    button, input[type="submit"], .btn {
+        font-family: 'Roboto', sans-serif;
+    }
+</style>
+
+<h2 class="tour-title" style="padding-top: 30px;">Chi Tiết Tour: @Model.TieuDe</h2>
+
+<div class="row">
+    <!-- Left Column: Tour Info -->
+    <div class="col-md-5">
+        <h4>Thông Tin Tour</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>Tên Tour:</dt>
+            <dd>@Model.TieuDe</dd>
+
+            <dt>Thời Gian Bắt Đầu:</dt>
+            <dd>@(Model.TripStart.HasValue ? Model.TripStart.Value.ToString("dd/MM/yyyy") : "Chưa xác định")</dd>
+
+            <dt>Thời Gian Kết Thúc:</dt>
+            <dd>@(Model.TripEnd.HasValue ? Model.TripEnd.Value.ToString("dd/MM/yyyy") : "Chưa xác định")</dd>
+
+           
+            <dt>Lịch Trình:</dt>
+            <dd>
+                @if (!string.IsNullOrEmpty(Model.LichTrinh))
+                {
+                    // Tách lịch trình theo từ khóa "Ngày" nhưng giữ lại phần nội dung của mỗi ngày
+                    var scheduleDays = Model.LichTrinh.Split(new[] { "Ngày" }, StringSplitOptions.RemoveEmptyEntries);
+
+                    foreach (var day in scheduleDays)
+                    {
+                        // Bỏ qua phần ngày và xử lý từng dòng hoạt động
+                        var trimmedDay = day.Trim();
+                        var firstColonIndex = trimmedDay.IndexOf(":");
+
+                        if (firstColonIndex > -1)
+                        {
+                            // Lấy tiêu đề ngày, ví dụ: "1", "2", ...
+                            var dayTitle = trimmedDay.Substring(0, firstColonIndex).Trim();
+                            <p><strong>Ngày @dayTitle:</strong></p>
+
+                            // Lấy phần hoạt động còn lại
+                            var activities = trimmedDay.Substring(firstColonIndex + 1);
+
+                            // Sử dụng Split để tách từng hoạt động theo dấu "HH:mm: "
+                            var activityList = activities.Split(new[] { ". " }, StringSplitOptions.None);
+                            foreach (var activity in activityList)
+                            {
+                                if (!string.IsNullOrWhiteSpace(activity))
+                                {
+                                    <p>@activity.Trim()</p>
+                                }
+                            }
+                        }
+                    }
+                }
+            </dd>
+
+            <dt>Địa Điểm:</dt>
+            <dd>@Model.DiaDiem</dd>
+
+            <dt>Số Người Tối Đa:</dt>
+            <dd>@Model.SoNguoiToiDa</dd>
+
+            <dt>Phương Tiện:</dt>
+            <dd>@Model.PhuongTien</dd>
+
+            <dt>Giá Tour:</dt>
+            <dd>@Convert.ToDecimal(Model.GiaTour).ToString("0.##") USD</dd>
+
+            <dt>Bài Viết:</dt>
+            <dd>@Model.BaiViet</dd>
+
+            <dt>Trạng Thái:</dt>
+            <dd>
+                @if (Model.Status == "N")
+                {
+                    <span>Đang chờ duyệt bài...</span>
+                }
+                else if (Model.Status == "A")
+                {
+                    <span style="color: green;">Đã duyệt bài <i class="fa fa-check"></i></span>
+                }
+                else if (Model.Status == "R")
+                {
+                    <span style="color: red;">Đã từ chối duyệt bài <i class="fa fa-times"></i></span>
+                <dt>Lí Do Từ Chối:</dt>
+                <dd>@Model.RejectionNote</dd>
+            }
+                </dd>
+            </dl>
+        </div>
+
+        <!-- Right Column: Tour Image -->
+        <div class="col-md-5 text-center">
+            <h4>Hình Ảnh Tour</h4>
+            <img src="@Model.HinhAnh" alt="Hình ảnh tour" style="width:50%; height:auto;" />
+        </div>
+    </div>
+
+    <div>
+        <form id="updateStatusForm" method="post" action="@Url.Action("UpdateStatusTour", "AwaitingApprovalTour")">
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(model => model.ID)
+            <input type="hidden" id="statusInput" name="status" />
+            <input type="hidden" id="rejectionNoteInput" name="rejectionNote" />
+
+            <button type="button" onclick="approveTour()" class="btn btn-success">Chấp Nhận Duyệt Bài</button>
+            <button type="button" onclick="showRejectModal()" class="btn btn-danger">Từ Chối Duyệt Bài</button>
+            <a href="@Url.Action("ListPendingTours", "AwaitingApprovalTour")" class="btn btn-default">Quay Lại Danh Sách</a>
+        </form>
+    </div>
+
+    <!-- Modal for Rejection Reason -->
+    <div class="modal fade" id="rejectModal" tabindex="-1" role="dialog" aria-labelledby="rejectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rejectModalLabel">Nhập Lý Do Từ Chối</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="rejectionNote">Lý do:</label>
+                        <textarea id="rejectionNote" class="form-control" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <button type="button" onclick="submitRejection()" class="btn btn-danger">Gửi Lý Do</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Script -->
+    @if (TempData["Message"] != null)
+    {
+        <script>
+        alert(decodeURIComponent('@Uri.EscapeDataString(TempData["Message"].ToString())'));
+        </script>
+    }
+
+    <script>
+        function approveTour() {
+            document.getElementById("statusInput").value = true;
+            document.getElementById("updateStatusForm").submit();
+        }
+
+        function showRejectModal() {
+            $('#rejectModal').modal('show');
+        }
+
+        function submitRejection() {
+            var rejectionNote = document.getElementById("rejectionNote").value;
+            document.getElementById("statusInput").value = false;
+            document.getElementById("rejectionNoteInput").value = rejectionNote;
+            $('#rejectModal').modal('hide');
+            document.getElementById("updateStatusForm").submit();
+        }
+    </script>

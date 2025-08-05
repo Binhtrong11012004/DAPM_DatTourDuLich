@@ -1,0 +1,72 @@
+﻿/* CSS for the top navigation bar */
+.top-bar {
+    background: rgba(45, 146, 204, 0.8);
+    color: #fff;
+    height: 40px; /* Adjusted height for the bar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999; /* Higher z-index than menu */
+    backdrop-filter: blur(100px);
+    padding: 0 20px; /* Added padding to move items inward */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+    .contact-info p {
+        margin: 0 20px 0 0;
+        font-size: 18px; /* Adjusted font size for larger bar */
+    }
+
+.login-register {
+    display: flex;
+    align-items: center; /* Center align the icon */
+}
+
+.user-icon {
+    position: relative;
+    cursor: pointer;
+    width: 30px; /* Adjusted width for a smaller icon */
+    height: 30px; /* Adjusted height for a smaller icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .user-icon i {
+        font-size: 24px; /* Set the size of the Font Awesome icon */
+        color: #fff;
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px; /* Adjust this value to position the dropdown below the user icon */
+    right: 0;
+    background-color: #2c3e50;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000; /* Higher z-index than menu */
+}
+
+    .dropdown-content p,
+    .dropdown-content a {
+        color: #ecf0f1;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #2980b9;
+        }

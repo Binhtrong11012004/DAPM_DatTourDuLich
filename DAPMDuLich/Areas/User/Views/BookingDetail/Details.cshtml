@@ -1,0 +1,208 @@
+﻿@model DAPMDuLich.Models.DatTourChiTiet
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/User/Views/Shared/LayoutDatTour.cshtml";
+}
+
+<link rel="stylesheet" href="~/CSS/animate.css" />
+<link rel="stylesheet" href="~/CSS/bootstrap.css" />
+<link rel="stylesheet" href="~/CSS/icomoon.css" />
+<link rel="stylesheet" href="~/CSS/owl.carousel.min.css" />
+<link rel="stylesheet" href="~/CSS/owl.theme.default.min.css" />
+<link rel="stylesheet" href="~/CSS/style.css" />
+
+<<div class="container">
+    <style>
+        /* General Container Styling */
+        .container {
+            padding: 30px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .row {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Styling for Form Elements */
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        /* Change color of specific labels to blue */
+        .blue-text {
+            color: #007bff;  /* Blue color */
+        }
+
+        .form-group span {
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #888;
+        }
+
+        /* Button Styling */
+        .btn {
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            border: none;
+            color: white;
+        }
+
+        .btn-warning {
+            background-color: #ffc107;
+            border: none;
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border: none;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        /* Label styling for payment status */
+        .label {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+
+        .label-success {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .label-warning {
+            background-color: #ffc107;
+            color: black;
+        }
+    </style>
+
+    <div class="row">
+        <div class="col-md-12" style="margin-bottom:260px; justify-items:center">
+            <h3>Chi tiết tour</h3>
+            <form action="@Url.Action("ThanhToan", "BookingDetail", new { id = Model.BookingDetailID })" method="post">
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <a class="blue-text">Tên tour: &nbsp;</a>
+                        @ViewBag.TourName
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <a class="blue-text">Ngày đi: &nbsp;</a>
+                        @ViewBag.TripStart
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <a class="blue-text">Ngày về: &nbsp;</a>
+                        @ViewBag.TripEnd
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <a class="blue-text">Phương tiện: &nbsp;</a>
+                        @ViewBag.TripType
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <a class="blue-text">Số lượng khách du lịch: &nbsp;</a>
+                        @ViewBag.TravelerCount
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <a class="blue-text">Tổng giá tiền: &nbsp;</a>
+                        @Html.DisplayFor(model => model.Price) USD
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <a class="blue-text">Thời gian đặt: &nbsp;</a>
+                        @Html.DisplayFor(model => model.CreateAt)
+                    </div>
+                </div>
+
+                <!-- Hiển thị trạng thái thanh toán -->
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        @if (Model.DatTour.ThanhToan50 ?? false)
+                        {
+                            if (Model.DatTour.ThanhToan ?? false)
+                            {
+                                <span class="label label-success">Đã thanh toán 100%</span>
+                            }
+                            else
+                            {
+                                <span class="label label-warning">Đã thanh toán 50%</span>
+                                <p>Số tiền đã thanh toán: @string.Format("{0:N0}", Model.Price / 2) USD</p>
+                                <p>Số tiền cần thanh toán: @string.Format("{0:N0}", Model.Price / 2) USD</p>
+
+                                <!-- Nút thanh toán 50% còn lại -->
+                                <form action="@Url.Action("ThanhToanPartial", "BookingDetail", new { id = Model.BookingDetailID })" method="post">
+                                    <input type="submit" value="Thanh toán 50% còn lại" class="btn btn-warning" />
+                                </form>
+                            }
+                        }
+                        else
+                        {
+                            <form action="@Url.Action("ThanhToan", "BookingDetail", new { id = Model.BookingDetailID })" method="post">
+                                <input type="submit" value="Thanh toán 100%" class="btn btn-success" />
+                            </form>
+                            <form action="@Url.Action("ThanhToanPartial", "BookingDetail", new { id = Model.BookingDetailID })" method="post">
+                                <input type="submit" value="Thanh toán 50%" class="btn btn-success" />
+                            </form>
+                            @Html.ActionLink(
+                                "Thanh toán bằng Paypal",
+                                "PaymentWithPaypal",
+                                "BookingDetail",
+                                new { area = "User", bookingDetailID = Model.BookingDetailID },
+                                new { @class = "btn btn-success" })
+                        }
+                    </div>
+                </div>
+
+                <!-- Nút quay lại lịch sử đặt tour -->
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        @Html.ActionLink("Quay về booking history", "History", "Booking", null, new { @class = "btn btn-danger", @type = "button" })
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
